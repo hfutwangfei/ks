@@ -30,3 +30,31 @@ nginx/
 ```
 
 `Chart.yaml`用于定义`Chart`的基本信息，包括名称、API和应用版本。
+
+```yaml
+...
+name: nginx
+...
+version: 0.1.0
+...
+```
+
+当您向`Kubernetes`部署基于`Helm`的应用时，可以直接在`KubeSphere`控制台上编辑values.yaml 文件。
+
+```yaml
+...
+service:
+  type: ClusterIP
+  port: 80
+...
+```
+
+## 3. 打包 Chart
+
+前往`nginx`的上一个目录，执行以下命令打包您的`Chart`，这会创建一个`.tgz`包。
+
+```shell
+$ helm package nginx
+$ ls
+nginx  nginx-0.1.0.tgz
+```
