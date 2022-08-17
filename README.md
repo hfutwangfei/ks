@@ -1,13 +1,12 @@
 # Helm 开发者指南
 
-
 ## 1. 创建本地仓库
 
 执行以下命令在您的机器上创建仓库。
 
 ```shell
-$ mkdir helm-repo
-$ cd helm-repo
+mkdir helm-repo
+cd helm-repo
 ```
 
 ## 2. 创建应用
