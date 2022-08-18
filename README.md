@@ -61,3 +61,6 @@ nginx  nginx-0.1.0.tgz
 > 注意：
 > postgres启动环境变量需要添加[`POSTGRES_DB=postgres`](https://github.com/odoo/odoo/issues/27447)
 > 否则odoo无法连接postgres
+> > 参考:
+> > [Odoo Docker安装&部署](https://zhuanlan.zhihu.com/p/377799674)
+> > [odoo环境变量配置](https://github.com/jeffery9/kubernetes-odoo/blob/master/odoo.yaml)
