@@ -57,3 +57,7 @@ $ helm package nginx
 $ ls
 nginx  nginx-0.1.0.tgz
 ```
+
+> 注意：
+> postgres启动环境变量需要添加[`POSTGRES_DB=postgres`](https://github.com/odoo/odoo/issues/27447)
+> 否则odoo无法连接postgres
