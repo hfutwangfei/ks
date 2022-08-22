@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "odoo_crm.fullname" . }}-test-connection"
+  labels:
+    {{- include "odoo_crm.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "odoo_crm.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
