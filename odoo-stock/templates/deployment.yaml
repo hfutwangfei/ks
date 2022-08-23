@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8069
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -45,6 +45,15 @@ spec:
             httpGet:
               path: /
               port: http
+          env:
+          - name: DB_PORT_5432_TCP_ADDR # 
+            value: "10.233.68.192" # "localhost"
+          - name: DB_PORT_5432_TCP_PORT
+            value: "5432" # "5432"
+          - name: DB_ENV_POSTGRES_USER
+            value: "wangfei-postgres"
+          - name: DB_ENV_POSTGRES_PASSWORD
+            value: "Haier2022"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
