@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "syncope.fullname" . }}-test-connection"
+  labels:
+    {{- include "syncope.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "syncope.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

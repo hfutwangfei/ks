@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "attic-harmony.fullname" . }}-test-connection"
+  labels:
+    {{- include "attic-harmony.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "attic-harmony.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

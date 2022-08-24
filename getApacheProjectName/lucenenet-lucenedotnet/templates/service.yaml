@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "lucenenet-lucenedotnet.fullname" . }}
+  labels:
+    {{- include "lucenenet-lucenedotnet.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "lucenenet-lucenedotnet.selectorLabels" . | nindent 4 }}

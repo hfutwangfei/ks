@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "commons-logging.fullname" . }}-test-connection"
+  labels:
+    {{- include "commons-logging.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "commons-logging.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

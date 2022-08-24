@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "velocity-anakia.fullname" . }}-test-connection"
+  labels:
+    {{- include "velocity-anakia.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "velocity-anakia.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

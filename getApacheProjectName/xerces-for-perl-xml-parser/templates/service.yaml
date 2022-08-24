@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "xerces-for-perl-xml-parser.fullname" . }}
+  labels:
+    {{- include "xerces-for-perl-xml-parser.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "xerces-for-perl-xml-parser.selectorLabels" . | nindent 4 }}
