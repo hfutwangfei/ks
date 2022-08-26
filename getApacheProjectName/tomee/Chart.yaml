@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tomee
-description: A Helm chart for Kubernetes
+description: Apache TomEE Web Profile delivers Servlets, JSP, JSF, JTA, JPA, CDI, Bean Validation and EJB         Lite. Apache TomEE Plus has all the features of TomEE with the addition of JAX-RS (RESTfull Services),         JAX-WS (Web Services), JMS (Java Message Service) and JCA (the Java Connector Architecture). The         additional functionality is delivered via Apache CXF, Apache ActiveMQ and the Geron...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bigtop
-description: A Helm chart for Kubernetes
+description: Bigtop is a project for the development of packaging and tests of the Apache Hadoop ecosystem.             The primary goal of Bigtop is to build a community around the packaging and interoperability             testing of Hadoop-related projects. This includes testing at various levels (packaging, platform,             runtime, upgrade, etc...) developed by a community with a focus on the system ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

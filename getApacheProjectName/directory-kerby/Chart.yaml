@@ -1,6 +1,6 @@
 apiVersion: v2
 name: directory-kerby
-description: A Helm chart for Kubernetes
+description: Apache Kerby is a Java Kerberos binding. It provides a rich, intuitive and interoperable implementation, library, KDC and various facilities that integrates PKI, OTP and token (OAuth2) as desired in modern environments such as cloud, Hadoop and mobile.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

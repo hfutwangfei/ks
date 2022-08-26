@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-jexl
-description: A Helm chart for Kubernetes
+description: Jexl is an implementation of the JSTL Expression Language with extensions.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

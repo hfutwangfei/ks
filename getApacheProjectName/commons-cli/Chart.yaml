@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-cli
-description: A Helm chart for Kubernetes
+description:      Commons CLI provides a simple API for presenting, proecessing and     validating a command line interface.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

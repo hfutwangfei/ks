@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-abdera
-description: A Helm chart for Kubernetes
+description: The goal of the Apache Abdera project is to build a functionally-complete, high-performance implementation of the IETF Atom Syndication Format (RFC 4287) and Atom Publishing Protocol (RFC 5023) specifications.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

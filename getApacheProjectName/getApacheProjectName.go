@@ -30,6 +30,7 @@ const (
 type Detail struct {
 	BugDatabase string `json:"bug-database"`
 	Name        string `json:"name"`
+	Description string `json:"description"`
 }
 
 type Result map[string]*Detail
@@ -73,7 +74,8 @@ func main() {
 	}
 
 	names := make(map[string]struct{})
-	for k := range result {
+	desc := ""
+	for k, v := range result {
 		names[k] = struct{}{}
 
 		// log.Printf("k: %+v", k)
@@ -89,7 +91,20 @@ func main() {
 		case Create:
 			helmCreate(p)
 		case Sed:
-			commands := sed(p)
+			desc = ""
+			desc = v.Description
+			desc = strings.ReplaceAll(desc, "\n      ", " ")
+			desc = strings.ReplaceAll(desc, "\n", " ")
+			desc = strings.ReplaceAll(desc, "'", "")
+			desc = strings.ReplaceAll(desc, "/", "")
+			desc = strings.ReplaceAll(desc, ":", "--")
+			desc = strings.ReplaceAll(desc, "&", " and ")
+			if len(desc) > 400 {
+				desc = desc[:400]
+				desc += "..."
+			}
+
+			commands := sed(p, desc)
 			cmds = append(cmds, commands...)
 		case Package:
 			helmPackage(p)
@@ -116,7 +131,7 @@ func helmCreate(p string) {
 }
 
 // sed -i ''  's/!/./g' test.txt
-func sed(p string) (commands []string) {
+func sed(p, desc string) (commands []string) {
 	// repository
 	{
 		cmd := exec.Command(`sed`,
@@ -152,6 +167,23 @@ func sed(p string) (commands []string) {
 			log.Println("exec.Command sed")
 		}
 	}
+	// description
+	{
+		cmd := exec.Command(`sed`,
+			`-i`,
+			`''`,
+			`'s/description: A Helm chart for Kubernetes/description: `+desc+`/g'`,
+			p+"/Chart.yaml")
+		cmdStr := cmd.String()
+		log.Printf("cmd: %s", cmdStr)
+		commands = append(commands, cmdStr)
+		if err := cmd.Run(); err != nil {
+			log.Printf("failed to sed err: %v", err)
+			// return
+		} else {
+			log.Println("exec.Command sed")
+		}
+	}
 
 	return
 }
@@ -164,7 +196,9 @@ func genMakefile() {
 	}
 
 	w := bufio.NewWriter(fi)
+	w.WriteString("sed:\n")
 	for _, cmd := range cmds {
+		w.WriteString("\t")
 		if _, err := w.WriteString(cmd); err != nil {
 			log.Printf("failed to write string cmd: %s err: %v", cmd, err)
 		}
@@ -179,7 +213,7 @@ func genMakefile() {
 func helmPackage(p string) {
 	cmd := exec.Command("helm", "package", p)
 	if err := cmd.Run(); err != nil {
-		log.Printf("failed to exec.Command err: %v", err)
+		log.Printf("failed to exec.Command %s err: %v", cmd.String(), err)
 		return
 	}
 	log.Println("exec.Command helm package")

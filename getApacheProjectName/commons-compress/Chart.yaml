@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-compress
-description: A Helm chart for Kubernetes
+description: Commons Compress-- working with zip, ar, jar, bz2, cpio, tar, gz, dump, pack200, lzma, 7z, arj and xz files.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

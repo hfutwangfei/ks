@@ -1,6 +1,6 @@
 apiVersion: v2
 name: parquet
-description: A Helm chart for Kubernetes
+description: Apache Parquet is an open source, column-oriented data file format designed for efficient data storage and retrieval. It provides efficient data compression and encoding schemes with enhanced performance to handle complex data in bulk. Parquet is available in multiple languages including Java, C++, and Python.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

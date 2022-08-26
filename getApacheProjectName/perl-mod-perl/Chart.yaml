@@ -1,6 +1,6 @@
 apiVersion: v2
 name: perl-mod-perl
-description: A Helm chart for Kubernetes
+description:  mod_perl is a unique piece of software that integrates the power of Perl with the flexibility and stability of the Apache Web server. With mod_perl, you can harness the power of the full Apache API with Perl and develop Web applications quickly, without sacrificing performance.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cayenne
-description: A Helm chart for Kubernetes
+description: Cayenne is a powerful, full-featured, opensource framework created for developers working with relational databases. it seamlessly maps any relational database to Java objects, reducing development time and adding considerable functionality to any application which requires a database. Developers using Cayenne will be able to concentrate on the core business requirements and the data model instead...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

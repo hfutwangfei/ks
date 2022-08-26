@@ -1,6 +1,6 @@
 apiVersion: v2
 name: deltaspike
-description: A Helm chart for Kubernetes
+description: Apache DeltaSpike is  a suite of portable CDI (Contexts  and  Dependency Injection) extensions intended to make application development easier when working with CDI and Java EE.  Some of its key features include--  - A core runtime that supports component configuration, type safe messaging and internationalization, and exception handling. - A suite of utilities to make programmatic bean lookup eas...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

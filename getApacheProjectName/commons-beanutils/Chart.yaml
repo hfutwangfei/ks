@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-beanutils
-description: A Helm chart for Kubernetes
+description: BeanUtils provides an easy-to-use but flexible wrapper around reflection and introspection.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

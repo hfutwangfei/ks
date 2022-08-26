@@ -1,6 +1,6 @@
 apiVersion: v2
 name: httpd-mod-ftp
-description: A Helm chart for Kubernetes
+description:  mod_ftp is an FTP Protocol module to serve httpd content over the FTP protocol (whereever the HTTP protocol could also be used). It provides both RETRREST retrieval and STORAPPE upload, using the same userpermissions model as httpd (so it shares the same security considerations as mod_dav plus mod_dav_fs).      
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: mina
-description: A Helm chart for Kubernetes
+description: Apache MINA is a network application framework which helps users develop high performance and high scalability network applications easily. It provides an abstract, event-driven, asynchronous API over various transports such as TCPIP and UDPIP via Java NIO.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

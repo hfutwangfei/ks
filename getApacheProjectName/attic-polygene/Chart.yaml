@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-polygene
-description: A Helm chart for Kubernetes
+description: Apache Polygene is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from Aspect Oriented Programming, Dependency Injection and Domain Driven Design. Composite Oriented Programming allows developers to work with fragments, smaller than classes, and compose fragments into larger composites which acts like the...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

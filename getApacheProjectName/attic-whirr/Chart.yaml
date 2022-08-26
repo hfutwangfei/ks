@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-whirr
-description: A Helm chart for Kubernetes
+description: Apache Whirr is a set of libraries for running cloud services  Whirr provides-- 1. A cloud-neutral way to run services. You dont have to worry about the idiosyncrasies of each provider. 2. A common service API. The details of provisioning are particular to the service. 3. Smart defaults for services. You can get a properly configured system running quickly, while still being able to override setti...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

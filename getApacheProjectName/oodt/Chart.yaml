@@ -1,6 +1,6 @@
 apiVersion: v2
 name: oodt
-description: A Helm chart for Kubernetes
+description: Apache OODT software is component based, and offers a software architecture beyond simple science applications.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

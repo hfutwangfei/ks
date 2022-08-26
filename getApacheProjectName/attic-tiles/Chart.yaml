@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-tiles
-description: A Helm chart for Kubernetes
+description: Apache Tiles™ is a templating framework built to simplify the development of web application user interfaces.      Tiles allows authors to define page fragments which can be assembled into a      complete page at runtime. These fragments, or tiles, can be used as simple      includes in order to reduce the duplication of common page elements or embedded      within other tiles to develop a serie...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

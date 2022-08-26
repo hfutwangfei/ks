@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-harmony
-description: A Helm chart for Kubernetes
+description:  Apache Harmony software is a modular Java runtime with class libraries and associated tools.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

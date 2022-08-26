@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-weaver
-description: A Helm chart for Kubernetes
+description:  Apache Commons Weaver provides an easy way to enhance compiled Java classes by generating ("weaving") bytecode into those classes.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

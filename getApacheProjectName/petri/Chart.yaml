@@ -1,6 +1,6 @@
 apiVersion: v2
 name: petri
-description: A Helm chart for Kubernetes
+description: Apache Petri deals with the assessment of, education in, and adoption of the Foundations policies and procedures for collaborative development and the pros and cons of joining the Foundation.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

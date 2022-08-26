@@ -1,6 +1,6 @@
 apiVersion: v2
 name: httpcomponents-commons-httpclient
-description: A Helm chart for Kubernetes
+description:  Commons HttpClient is a library for client-side HTTP communication. It provides support for HTTP1.1 and HTTP1.0, plus various authentication schemes and cookie policies. Thanks to its widespread use and years of development, it is a very mature and stable codebase. However, due to limitations in the API design, Commons HttpClient will eventually be replaced by HttpClient 4.0 with a completely red...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

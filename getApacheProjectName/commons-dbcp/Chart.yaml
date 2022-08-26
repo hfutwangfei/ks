@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-dbcp
-description: A Helm chart for Kubernetes
+description: Commons Database Connection Pooling
 
 # A chart can be either an 'application' or a 'library' chart.
 #

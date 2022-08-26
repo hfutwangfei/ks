@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brooklyn
-description: A Helm chart for Kubernetes
+description: Brooklyn is about deploying and managing applications-- composing a full stack for an application;   deploying to cloud and non-cloud targets; using monitoring tools to collect key healthperformance metrics;   responding to situations such as a failing node; and adding or removing capacity to match demand.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

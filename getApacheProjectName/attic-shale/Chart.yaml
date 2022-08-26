@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-shale
-description: A Helm chart for Kubernetes
+description: Shale is a modern web application framework, fundamentaly based on JavaServer Faces, and focused on improving ease of use for developers adopting JSF as a foundational technology in their own development environments.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

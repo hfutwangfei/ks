@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-vxquery
-description: A Helm chart for Kubernetes
+description: Apache VXQuery will be a standards compliant XML Query processor implemented in Java. The focus is on the evaluation of queries on large amounts of XML data. Specifically the goal is to evaluate queries on large collections of relatively small XML documents. To achieve this queries will be evaluated on a cluster of shared nothing machines.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

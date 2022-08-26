@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-click
-description: A Helm chart for Kubernetes
+description: Apache Click is a modern Java web application framework, providing     a natural rich client style programming model. Click provides a page and     component oriented design with a event based programming model. Leveraging     a stateless architecture Click encourages loosely coupled pages for     easier maintenance. Click is designed to be very easy to learn and use, with     developers getting u...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

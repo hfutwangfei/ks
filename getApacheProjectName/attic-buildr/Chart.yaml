@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-buildr
-description: A Helm chart for Kubernetes
+description: We wanted something thats simple and intuitive to use, so we only need to tell it what to do, and it takes care of the rest.  But also something we can easily extend for those one-off tasks, with a language thats a joy to use.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

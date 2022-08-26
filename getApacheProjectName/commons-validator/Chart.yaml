@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-validator
-description: A Helm chart for Kubernetes
+description:      Commons Validator provides the building blocks for both client side validation     and server side data validation. It may be used standalone or with a framework like     Struts.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

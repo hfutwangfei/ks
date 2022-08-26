@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-imaging
-description: A Helm chart for Kubernetes
+description:  The Apache Commons Imaging library reads and writes a variety of image formats, including fast parsing of image info (size, color space, ICC profile, etc.) and metadata. Previously known as Apache Commons Sanselan.      
 
 # A chart can be either an 'application' or a 'library' chart.
 #

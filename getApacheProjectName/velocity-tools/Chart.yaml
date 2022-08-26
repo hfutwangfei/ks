@@ -1,6 +1,6 @@
 apiVersion: v2
 name: velocity-tools
-description: A Helm chart for Kubernetes
+description: VelocityTools is a collection of Velocity subprojects with a common goal of creating tools and infrastructure for building both web and non-web applications using the Velocity template engine.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

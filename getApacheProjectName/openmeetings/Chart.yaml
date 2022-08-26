@@ -1,6 +1,6 @@
 apiVersion: v2
 name: openmeetings
-description: A Helm chart for Kubernetes
+description:  The Apache OpenMeetings provides video conferencing, instant messaging, white board,  collaborative document editing and other groupware tools using API functions  of the Red5 Streaming Server for Remoting and Streaming.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

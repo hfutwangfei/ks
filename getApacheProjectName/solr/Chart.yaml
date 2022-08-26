@@ -1,6 +1,6 @@
 apiVersion: v2
 name: solr
-description: A Helm chart for Kubernetes
+description: Solr is an open source enterprise search server based on the Lucene Java search library, with Rest-like JSONHTTP APIs, high performance, high availability, powerful analytics, hit highlighting, faceted search, caching, replication, and a web administration interface.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

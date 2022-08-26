@@ -1,6 +1,6 @@
 apiVersion: v2
 name: directory-server
-description: A Helm chart for Kubernetes
+description: ApacheDS is an extensible and embeddable directory server entirely written in Java, which has been certified LDAPv3 compatible by the Open Group. Besides LDAP it supports Kerberos 5 and the Change Password Protocol. It has been designed to introduce triggers, stored procedures, queues and views to the world of LDAP which has lacked these rich constructs.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

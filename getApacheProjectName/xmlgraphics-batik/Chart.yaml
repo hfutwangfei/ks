@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xmlgraphics-batik
-description: A Helm chart for Kubernetes
+description: Batik is a Java-based toolkit for applications or applets to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as display, generation and manipulation.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

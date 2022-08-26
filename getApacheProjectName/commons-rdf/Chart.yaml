@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-rdf
-description: A Helm chart for Kubernetes
+description: provide a type-safe, non-general API that covers RDF 1.1.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

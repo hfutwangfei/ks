@@ -1,6 +1,6 @@
 apiVersion: v2
 name: james
-description: A Helm chart for Kubernetes
+description: The Apache Java Enterprise Mail Server (a.k.a. Apache James) is a 100% pure Java SMTP and POP3 Mail server and NNTP News server. We have designed James to be a complete and portable enterprise mail engine solution based on currently available open protocols.  James is also a mail application platform. We have developed a Java API to let you write Java code to process emails that we call the mailet...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

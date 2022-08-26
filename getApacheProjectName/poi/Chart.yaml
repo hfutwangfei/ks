@@ -1,6 +1,6 @@
 apiVersion: v2
 name: poi
-description: A Helm chart for Kubernetes
+description: APIs for manipulating various file formats based upon Open Office XML (ECMA-376) and Microsofts OLE 2 Compound Document formats using pure Java. Apache POI is your Java Excel, Word and PowerPoint solution. We have a complete API for porting other OOXML and OLE 2 Compound Document formats and welcome others to participate.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

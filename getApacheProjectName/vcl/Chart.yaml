@@ -1,6 +1,6 @@
 apiVersion: v2
 name: vcl
-description: A Helm chart for Kubernetes
+description: VCL is a modular cloud computing platform which dynamically provisions and brokers remote access to compute resources including virtual machines, bare-metal computers, and resources in other cloud platforms. A self-service web portal is used to request resources and for administration.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

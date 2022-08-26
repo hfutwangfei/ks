@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-esme
-description: A Helm chart for Kubernetes
+description: Apache ESME (Enterprise Social Messaging Environment) is a secure and highly scalable microsharing and micromessaging platform that allows people to discover and meet one another and get controlled access to other sources of information, all in a business process context.    You can hardly turn a web page these days without seeing a story that describes how people are using social networks, whethe...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

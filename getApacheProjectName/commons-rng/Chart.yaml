@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-rng
-description: A Helm chart for Kubernetes
+description: Implementations of pseudo-random generators.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

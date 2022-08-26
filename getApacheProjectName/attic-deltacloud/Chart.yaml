@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-deltacloud
-description: A Helm chart for Kubernetes
+description: Deltacloud contains a cloud abstraction API - whether the Deltacloud classic API, the DMTF CIMI API or even the EC2 API. Each abstraction API works as a wrapper around a large number of clouds, shielding users from their differences. For every cloud provider there is a driver "speaking" that cloud providers native API, freeing you from dealing with the particulars of each clouds API.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

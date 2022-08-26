@@ -1,6 +1,6 @@
 apiVersion: v2
 name: activemq
-description: A Helm chart for Kubernetes
+description: ActiveMQ is a fast and powerful Message Broker which supports many Cross Language Clients and Protocols and many advanced features while fully supporting JMS 1.1 and J2EE 1.4.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

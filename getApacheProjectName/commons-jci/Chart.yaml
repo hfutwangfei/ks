@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-jci
-description: A Helm chart for Kubernetes
+description:    Commons JCI provides a unified interface to any of several Java compilers.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

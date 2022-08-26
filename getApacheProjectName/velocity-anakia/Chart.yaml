@@ -1,6 +1,6 @@
 apiVersion: v2
 name: velocity-anakia
-description: A Helm chart for Kubernetes
+description: Anakia is an XML transformation tool that uses JDOM and Velocity to transform XML documents into the format of your choice. It provides an alternative to using Ants style task and XSL to process XML files.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

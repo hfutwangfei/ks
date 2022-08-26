@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tcl-websh
-description: A Helm chart for Kubernetes
+description: Websh is a rapid development environment for building powerful, fast, and reliable web applications in Tcl. Websh is versatile and handles everything from HTML generation to data-base driven one-to-one page customization. Websh can be run in CGI environments and as Apache module. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

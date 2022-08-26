@@ -1,6 +1,6 @@
 apiVersion: v2
 name: trafficserver-traffic-server
-description: A Helm chart for Kubernetes
+description: Apache Traffic Server is fast, scalable and extensible HTTP1.1 compliant caching proxy server. ATS can be used as a reverse, forward or even transparent HTTP proxy.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

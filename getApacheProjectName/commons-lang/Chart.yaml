@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-lang
-description: A Helm chart for Kubernetes
+description:    Commons Lang, a package of Java utility classes for the   classes that are in java.langs hierarchy, or are considered to be so   standard as to justify existence in java.lang.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

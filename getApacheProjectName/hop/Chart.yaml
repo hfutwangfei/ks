@@ -1,6 +1,6 @@
 apiVersion: v2
 name: hop
-description: A Helm chart for Kubernetes
+description: The Hop Orchestration Platform, or Apache Hop, aims to facilitate all aspects of data and metadata orchestration.  Hop is an entirely new open source data integration platform that is easy to use, fast and flexible  Hop aims to be the future of data integration. Visual development enables developers to be more productive than they can be through code. Our Design once, run anywhere workflows and pi...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

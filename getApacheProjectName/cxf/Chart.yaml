@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cxf
-description: A Helm chart for Kubernetes
+description: Apache CXF is an open source services framework. CXF helps you build and develop services using frontend programming APIs like JAX-WS and JAX-RS. These services can speak a variety of protocols such as SOAP, XMLHTTP, RESTful HTTP, or CORBA and work over a variety of transports such as HTTP, JMS or JBI.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

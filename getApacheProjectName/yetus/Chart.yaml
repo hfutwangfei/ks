@@ -1,6 +1,6 @@
 apiVersion: v2
 name: yetus
-description: A Helm chart for Kubernetes
+description: A collection of libraries and tools that enable contribution and release processes for software projects.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

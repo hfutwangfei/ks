@@ -1,6 +1,6 @@
 apiVersion: v2
 name: velocity
-description: A Helm chart for Kubernetes
+description: Velocity is a Java-based template engine. It permits anyone to use a simple yet powerful template language to reference objects defined in Java code.  When Velocity is used for web development, Web designers can work in parallel with Java programmers to develop web sites according to the Model-View-Controller (MVC) model, meaning that web page designers can focus solely on creating a site that loo...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

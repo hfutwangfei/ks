@@ -1,6 +1,6 @@
 apiVersion: v2
 name: netbeans
-description: A Helm chart for Kubernetes
+description: Apache NetBeans is and IDE for many language (java, php, ...). Apache NetBeans is a platform that can be extended by third party developer.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

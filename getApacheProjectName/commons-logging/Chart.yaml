@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-logging
-description: A Helm chart for Kubernetes
+description:      Commons Logging is a thin adapter allowing configurable bridging to other,     well known logging systems.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

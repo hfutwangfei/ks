@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xmlgraphics-xml-graphics-commons
-description: A Helm chart for Kubernetes
+description: Apache XML Graphics Commons is a library that consists of several reusable components used by Apache Batik and Apache FOP. Many of these components can easily be used separately outside the domains of SVG and XSL-FO. You will find components such as a PDF library, an RTF library, Graphics2D implementations that let you generate PDF and PostScript files and much more.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

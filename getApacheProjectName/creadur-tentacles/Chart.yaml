@@ -1,6 +1,6 @@
 apiVersion: v2
 name: creadur-tentacles
-description: A Helm chart for Kubernetes
+description: Apache Tentacles helps the reviewer by automating interactions with the repository containing the artifacts comprising the release.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

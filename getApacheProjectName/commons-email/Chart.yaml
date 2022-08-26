@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-email
-description: A Helm chart for Kubernetes
+description:  Commons-Email aims to provide a API for sending email. It is built on top of the Java Mail API, which it aims to simplify.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

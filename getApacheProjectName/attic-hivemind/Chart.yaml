@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-hivemind
-description: A Helm chart for Kubernetes
+description: HiveMind is a framework for creating applications, not an application, or even an application server, itself. The core of HiveMind is the startup logic that knows how to parse and understand the module deployment descriptors, and use that information to instantiate and initialize all those services and configurations.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

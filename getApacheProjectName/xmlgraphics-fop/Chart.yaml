@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xmlgraphics-fop
-description: A Helm chart for Kubernetes
+description: FOP (Formatting Objects Processor) is the worlds first print formatter driven by XSL formatting objects (XSL-FO) and the worlds first output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats  currently supported include PDF, PCL, PS, SVG, XML (area tree representation), Print, AWT, MIF and ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

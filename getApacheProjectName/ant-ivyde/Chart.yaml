@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-ivyde
-description: A Helm chart for Kubernetes
+description: IvyDE lets you manage your dependencies declared in an ivy.xml in your Java Eclipse projects. IvyDE will contribute to the classpath of your Java project, with the classpath container. It also bring an editor of ivy.xml files, with completion.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

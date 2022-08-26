@@ -1,6 +1,6 @@
 apiVersion: v2
 name: lucenenet-lucenedotnet
-description: A Helm chart for Kubernetes
+description: Lucene.Net is a port of the Lucene search engine library, written in C# and targeted at .NET runtime users. The Lucene search library is based on an inverted index. Lucene.Net has three primary goals--  1. Maintain the existing line-by-line port from Java to C#, fully automating and commoditizing the process such that the project can easily synchronize with the Java Lucene release schedule; 2. Mai...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

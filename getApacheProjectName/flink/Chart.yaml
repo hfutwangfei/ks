@@ -1,6 +1,6 @@
 apiVersion: v2
 name: flink
-description: A Helm chart for Kubernetes
+description: Flink is an open source system for expressive, declarative, fast, and efficient data analysis. It combines the scalability and programming flexibility of distributed MapReduce-like platforms with the efficiency, out-of-core execution, and query optimization capabilities found in parallel databases.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

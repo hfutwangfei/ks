@@ -1,6 +1,6 @@
 apiVersion: v2
 name: celix
-description: A Helm chart for Kubernetes
+description:  Apache Celix is an implementation of a dynamic service framework inspired by the OSGi specification and adapted to C and C++ (C++17). It is a framework to develop dynamic modular software applications using component and in-process service-oriented programming.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

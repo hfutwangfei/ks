@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-functor
-description: A Helm chart for Kubernetes
+description: The Apache Commons Functor library defines common functor and functor-related interfaces,     implementations, and utilities.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

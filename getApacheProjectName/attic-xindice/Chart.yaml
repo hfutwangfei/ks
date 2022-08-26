@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-xindice
-description: A Helm chart for Kubernetes
+description: Pure Java based native XML database. Supports XPath and XUpdate.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

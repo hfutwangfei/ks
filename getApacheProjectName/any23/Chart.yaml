@@ -1,6 +1,6 @@
 apiVersion: v2
 name: any23
-description: A Helm chart for Kubernetes
+description: Apache Any23 is used in major Web of Data applications. It is written in Java and licensed under the Apache License v2.0. Apache Any23 can be used in various ways-- * As a library in Java applications that consume structured data from the Web. * As a command-line tool for extracting and converting between the supported formats. * As online service API available at any23.org.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

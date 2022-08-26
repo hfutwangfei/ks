@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-vfs
-description: A Helm chart for Kubernetes
+description:    VFS is a Virtual File System library.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

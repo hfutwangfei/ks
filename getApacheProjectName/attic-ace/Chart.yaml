@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-ace
-description: A Helm chart for Kubernetes
+description: When assembling software out of reusable components, the task of deploying software onto an ever increasing number of targets is not trivial to solve. This becomes even harder when these targets require different components based on whos using them.  Apache ACE allows you to group those components and assign them to a managed set of targets. This allows you to distribute updates and new components...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

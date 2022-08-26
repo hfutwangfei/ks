@@ -1,6 +1,6 @@
 apiVersion: v2
 name: trafficcontrol-traffic-control
-description: A Helm chart for Kubernetes
+description: With Apache Traffic Control, operators can setup a Content Delivery Network to quickly and efficiently deliver content to their users. Traffic Control is a highly distributed, scalable and redundant solution meeting the needs of operators from small to large.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

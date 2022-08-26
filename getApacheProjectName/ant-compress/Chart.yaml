@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-compress
-description: A Helm chart for Kubernetes
+description: This is a library of Ant tasks and types uses Apache Commons Compress to support additional archive formats like ar, pack200, xz and cpio.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

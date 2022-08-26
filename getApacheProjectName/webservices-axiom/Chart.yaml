@@ -1,6 +1,6 @@
 apiVersion: v2
 name: webservices-axiom
-description: A Helm chart for Kubernetes
+description: Apache Axiom is a StAX-based, XML Infoset compliant object model which supports on-demand building of the object tree. It supports a novel "pull-through" model which allows one to turn off the tree building and directly access the underlying pull event stream. It also has built in support for XML Optimized Packaging (XOP) and MTOM, the combination of which allows XML to carry binary data efficient...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

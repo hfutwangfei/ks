@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-shindig
-description: A Helm chart for Kubernetes
+description: Apache Shindig is a container for hosting social application consisting of four parts--      Gadget Container JavaScript-- core JavaScript foundation for general gadget functionality (read more about gadget functionality). This JavaScript manages security, communication, UI layout, and feature extensions, such as the OpenSocial API.     Gadget Rendering Server-- used to render the gadget XML into ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

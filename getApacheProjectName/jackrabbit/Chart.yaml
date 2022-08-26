@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jackrabbit
-description: A Helm chart for Kubernetes
+description:  Apache Jackrabbit is a fully conforming implementation of the Content Repository for Java Technology API (JCR). A content repository is a hierarchical content store with support for structured and unstructured content, full text search, versioning, transactions, observation, and more. Typical applications that use content repositories include content management, document management, and records m...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

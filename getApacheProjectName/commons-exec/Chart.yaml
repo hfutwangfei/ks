@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-exec
-description: A Helm chart for Kubernetes
+description:  A library to reliably execute external processes from within the JVM         
 
 # A chart can be either an 'application' or a 'library' chart.
 #

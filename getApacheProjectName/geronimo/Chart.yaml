@@ -1,6 +1,6 @@
 apiVersion: v2
 name: geronimo
-description: A Helm chart for Kubernetes
+description: Apache Geronimo is an open source server runtime that integrates the best open source projects to create JavaOSGi server runtimes that meet the needs of enterprise developers and system administrators. Our most popular distribution is a fully certified Java EE 5 application server runtime.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

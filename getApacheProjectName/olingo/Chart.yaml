@@ -1,6 +1,6 @@
 apiVersion: v2
 name: olingo
-description: A Helm chart for Kubernetes
+description: Apache Olingo is a Java library that implements the Open Data Protocol (OData). Apache Olingo serves client and server aspects of OData. It currently supports OData 2.0 and support OData 4.0 (beta). The latter is the OASIS version of the protocol-- OASIS Open Data Protocol (OData) TC.  The extensions part of Olingo for OData 2.0 contains additional features like the support of JPA persistency or a...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

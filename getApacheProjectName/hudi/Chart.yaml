@@ -1,6 +1,6 @@
 apiVersion: v2
 name: hudi
-description: A Helm chart for Kubernetes
+description: Hudi (pronounced “Hoodie”) brings stream processing to big data, providing upserts, deletes and incremental data streams.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

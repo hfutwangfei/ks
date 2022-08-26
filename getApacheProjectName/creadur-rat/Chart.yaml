@@ -1,6 +1,6 @@
 apiVersion: v2
 name: creadur-rat
-description: A Helm chart for Kubernetes
+description: Apache Rat improves accuracy and efficiency when reviewing and auditing releases.      It is heuristic in nature-- making guesses about possible problems.      It will produce false positives and cannot find every possible issue with a release.      Its reports require interpretation.  Apache Rat was developed in response to a need felt in the Apache Incubator to be able to  review releases for th...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

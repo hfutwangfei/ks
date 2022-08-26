@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-predictionio
-description: A Helm chart for Kubernetes
+description: PredictionIO is an open source Machine Learning Server built on top of state-of-the-art open source stack, that enables developers to manage and deploy production-ready predictive services for various kinds of machine learning tasks.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

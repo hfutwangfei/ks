@@ -1,6 +1,6 @@
 apiVersion: v2
 name: gora
-description: A Helm chart for Kubernetes
+description: Although there are various excellent ORM frameworks for relational databases, data modeling in NoSQL data stores differ profoundly from their relational cousins. Moreover, data-model agnostic frameworks such as JDO are not sufficient for use cases, where one needs to use the full power of the data models in column stores. Gora fills this gap by giving the user an easy-to-use in-memory data model a...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

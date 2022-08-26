@@ -1,6 +1,6 @@
 apiVersion: v2
 name: manifoldcf
-description: A Helm chart for Kubernetes
+description: ManifoldCF is an effort to provide an open source framework for connecting source content repositories like Microsoft Sharepoint and EMC Documentum, to target repositories or indexes, such as Apache Solr , OpenSearchServer or ElasticSearch. ManifoldCF also defines a security model for target repositories that permits them to enforce source-repository security policies.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

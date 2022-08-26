@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-lucy
-description: A Helm chart for Kubernetes
+description: The Apache Lucy search engine library provides full-text search for dynamic programming languages.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

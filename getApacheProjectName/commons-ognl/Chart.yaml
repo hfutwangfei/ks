@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-ognl
-description: A Helm chart for Kubernetes
+description:      The Apache Commons OGNL library is a Java development framework for Object-Graph Navigation Language,     plus other extras such as list projection and selection and lambda expressions.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

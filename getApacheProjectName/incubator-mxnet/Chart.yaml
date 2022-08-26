@@ -1,6 +1,6 @@
 apiVersion: v2
 name: incubator-mxnet
-description: A Helm chart for Kubernetes
+description: Apache MXNet is a deep learning framework designed for both efficiency and flexibility. Its lightweight, Portable, Flexible DistributedMobile Deep Learning with dynamic, mutation-aware data-flow dependency scheduler; for Python, R, Julia, Scala, Go, Javascript and more
 
 # A chart can be either an 'application' or a 'library' chart.
 #

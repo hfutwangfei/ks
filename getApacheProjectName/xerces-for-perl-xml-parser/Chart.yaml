@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xerces-for-perl-xml-parser
-description: A Helm chart for Kubernetes
+description:  XML----Xerces is the Perl API to the Apache projects Xerces XML parser. It is implemented using the Xerces C++ API, and it provides access to most of the C++ API from Perl.     Because it is based on Xerces-C, XML----Xerces provides a validating XML parser that makes it easy to give your application the ability to read and write XML data. Classes are provided for parsing, generating, manipulating...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

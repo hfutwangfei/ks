@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-reef
-description: A Helm chart for Kubernetes
+description:  Apache REEF (Retainable Evaluator Execution Framework) is a development framework that provides a control-plane for scheduling and coordinating task-level (data-plane) work on cluster resources obtained from a Resource Manager. REEF provides mechanisms that facilitate resource reuse for data caching, and state management abstractions that greatly ease the development of elastic data processing wo...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: synapse
-description: A Helm chart for Kubernetes
+description: Apache Synapse is a simple and highly effective ESB, Web Services intermediary and SOA framework. It can be added to your existing network very simply either as a services gateway or as an HTTP proxy. Once Apache Synapse is mediating your service requests it can perform many functions including routing, load-balancing, transformation and protocol switching. Apache Synapse can be used to build an E...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: syncope
-description: A Helm chart for Kubernetes
+description: Apache Syncope is an Open Source system for managing digital identities in enterprise environments, implemented in Java EE technology and released under Apache 2.0 license.  Identity management (or IdM) represents the joint result of business process and IT to manage user data on systems and applications. IdM involves considering user attributes, roles, resources and entitlements in trying to give...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

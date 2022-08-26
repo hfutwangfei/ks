@@ -1,6 +1,6 @@
 apiVersion: v2
 name: allura
-description: A Helm chart for Kubernetes
+description: Apache Allura is an open source implementation of a software "forge", a web site that manages source code repositories, bug reports, discussions, wiki pages, blogs and more for any number of individual projects.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

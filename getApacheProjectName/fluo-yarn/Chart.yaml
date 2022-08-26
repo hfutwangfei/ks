@@ -1,6 +1,6 @@
 apiVersion: v2
 name: fluo-yarn
-description: A Helm chart for Kubernetes
+description: Apache Fluo YARN is a tool for running Apache Fluo applications in Apache Hadoop YARN.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

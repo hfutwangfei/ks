@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-crunch
-description: A Helm chart for Kubernetes
+description: The Apache Crunch Java library provides a framework for writing, testing, and running MapReduce pipelines. Its goal is to make pipelines that are composed of many user-defined functions simple to write, easy to test, and efficient to run.  Running on top of Hadoop MapReduce and Apache Spark, the Apache Crunch™ library is a simple Java API for tasks like joining and data aggregation that are tedi...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

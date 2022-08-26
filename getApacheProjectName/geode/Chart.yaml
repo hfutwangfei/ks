@@ -1,6 +1,6 @@
 apiVersion: v2
 name: geode
-description: A Helm chart for Kubernetes
+description: Apache Geode is a data management platform that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Geode pools memory, CPU, network resources, and optionally local disk across multiple processes to manage application objects and behavior. It uses dynamic replication and data partitioning techniques to implement high availability,...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

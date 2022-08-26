@@ -1,6 +1,6 @@
 apiVersion: v2
 name: portals
-description: A Helm chart for Kubernetes
+description: The Apache Portals project provides various software products, including Apache Jetspeed-2, Apache Pluto, and Apache Portals Applications.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

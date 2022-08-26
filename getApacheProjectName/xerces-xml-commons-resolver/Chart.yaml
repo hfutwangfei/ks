@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xerces-xml-commons-resolver
-description: A Helm chart for Kubernetes
+description: The XML Commons Resolver can be used in a wide variety of XML parsing, processing and related programs to resolve various public or system identifiers into accessible URLs for use by your application.  The resolver supports several catalog types for mapping, including OASIS XML, OASIS TR 9401 and XCatalog styles.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

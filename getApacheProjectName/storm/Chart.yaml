@@ -1,6 +1,6 @@
 apiVersion: v2
 name: storm
-description: A Helm chart for Kubernetes
+description: Apache Storm is a distributed real-time computation system. Similar to how Hadoop provides a set of general primitives for doing batch processing, Storm provides a set of general primitives for doing real-time computation.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

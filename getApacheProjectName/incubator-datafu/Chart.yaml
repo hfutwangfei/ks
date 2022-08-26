@@ -1,6 +1,6 @@
 apiVersion: v2
 name: incubator-datafu
-description: A Helm chart for Kubernetes
+description: Apache DataFu consists of two libraries--  Apache DataFu Pig is a collection of useful user-defined functions for data analysis in Apache Pig.  Apache DataFu Hourglass is a library for incrementally processing data using Apache Hadoop MapReduce. This library was inspired by the prevelance of sliding window computations over daily tracking data. Computations such as these typically happen at regula...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

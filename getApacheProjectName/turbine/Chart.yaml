@@ -1,6 +1,6 @@
 apiVersion: v2
 name: turbine
-description: A Helm chart for Kubernetes
+description:  Turbine is a servlet based framework that allows experienced Java developers to quickly build web applications. Turbine allows you to use personalize the web sites and to use user logins to restrict access to parts of your application.  Turbine is a matured and well established framework that is used as the base of many other projects (like e.g. the excellent Jetspeed 1 Portals framework.  Turbin...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

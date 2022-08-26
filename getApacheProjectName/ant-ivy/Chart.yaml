@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-ivy
-description: A Helm chart for Kubernetes
+description: Apache Ivy is a very powerful dependency manager oriented toward Java dependency management, even though it could be used to manage dependencies of any kind.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

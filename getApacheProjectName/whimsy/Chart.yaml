@@ -1,6 +1,6 @@
 apiVersion: v2
 name: whimsy
-description: A Helm chart for Kubernetes
+description: The production Whimsy server also has a number of tools that automate some organizational processes,     like adding PMC members to official corporate rosters or reading, updating, and approving the monthly board agenda.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: myfaces-tobago
-description: A Helm chart for Kubernetes
+description: The goal of Tobago is to provide the community with a well designed set of user interface components based on JSF.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

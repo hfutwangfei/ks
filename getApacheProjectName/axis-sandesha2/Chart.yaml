@@ -1,6 +1,6 @@
 apiVersion: v2
 name: axis-sandesha2
-description: A Helm chart for Kubernetes
+description: Apache Sandesha2 is an Axis2 module that implements the WS-ReliableMessaging specification. It can be used both on the client side and on the server side.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

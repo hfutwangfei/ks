@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-antunit
-description: A Helm chart for Kubernetes
+description: The Ant Library provides Ant tasks for testing Ant task, it can also be used to drive functional and integration tests of arbitrary applications with Ant.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: accumulo
-description: A Helm chart for Kubernetes
+description: The Apache Accumulo sorted, distributed keyvalue store is based on Googles BigTable design. It is built on top of Apache Hadoop, Apache Zookeeper, and Apache Thrift. It features a few novel improvements on the BigTable design in the form of cell-level access labels and a server-side programming mechanism that can modify keyvalue pairs at various points in the data management process.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: httpcomponents-core
-description: A Helm chart for Kubernetes
+description:      HttpCore is a set of low level HTTP transport components that can be used to build custom     client and server side HTTP services with a minimal footprint. HttpCore supports two IO     models-- blocking IO model based on the classic Java IO and non-blocking, event driven IO     model based on Java NIO.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

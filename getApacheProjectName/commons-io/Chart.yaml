@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-io
-description: A Helm chart for Kubernetes
+description:    Commons-IO contains utility classes, stream implementations, file filters, file comparators and endian classes.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

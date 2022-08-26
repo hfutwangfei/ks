@@ -1,6 +1,6 @@
 apiVersion: v2
 name: pivot
-description: A Helm chart for Kubernetes
+description: Apache Pivot is an open-source platform for building installable Internet applications (IIAs). It combines the enhanced productivity and usability features of a modern user interface toolkit with the robustness of the Java platform. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

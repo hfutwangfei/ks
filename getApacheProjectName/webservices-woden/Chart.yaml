@@ -1,6 +1,6 @@
 apiVersion: v2
 name: webservices-woden
-description: A Helm chart for Kubernetes
+description: The Woden project is a subproject of the Apache Web Services Project to develop a Java class library for reading, manipulating, creating and writing WSDL documents, initially to support WSDL 2.0 but with the longer term aim of supporting past, present and future versions of WSDL.  There are two main deliverables-- an API and an implementation. The Woden API will consist of a set of Java interfaces...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

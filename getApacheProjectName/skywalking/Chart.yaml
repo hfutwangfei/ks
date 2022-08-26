@@ -1,6 +1,6 @@
 apiVersion: v2
 name: skywalking
-description: A Helm chart for Kubernetes
+description: Use Apache SkyWalking when you need an application performance monitor tool for distributed systems, especially designed for microservices, cloud native and container-based (Docker, K8s, Mesos) architectures.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

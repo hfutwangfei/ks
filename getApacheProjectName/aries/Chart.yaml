@@ -1,6 +1,6 @@
 apiVersion: v2
 name: aries
-description: A Helm chart for Kubernetes
+description: The Aries project is delivering a set of pluggable Java components enabling an enterprise OSGi application programming model. This includes implementations and extensions of application-focused specifications defined by the OSGi Alliance Enterprise Expert Group (EEG) and an assembly format for multi-bundle applications, for deployment to a variety of OSGi based runtimes.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

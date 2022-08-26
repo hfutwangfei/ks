@@ -1,6 +1,6 @@
 apiVersion: v2
 name: openjpa
-description: A Helm chart for Kubernetes
+description: Apache OpenJPA is a Java persistence project at The Apache Software Foundation that can be used as a stand-alone POJO persistence layer or integrated into any Java EE compliant container and many other lightweight frameworks, such as Tomcat and Spring.  The 1.x releases are a production ready, feature-rich, compliant implementation of the Java Persistence API (JPA) 1.0 part of the JSR-220 Enterpri...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

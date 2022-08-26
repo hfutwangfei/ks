@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-configuration
-description: A Helm chart for Kubernetes
+description:  Library to use configurationpreferences of various sources and formats.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

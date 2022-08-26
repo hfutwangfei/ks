@@ -1,6 +1,6 @@
 apiVersion: v2
 name: logging-log4j-2
-description: A Helm chart for Kubernetes
+description: Apache Log4j 2
 
 # A chart can be either an 'application' or a 'library' chart.
 #

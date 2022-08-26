@@ -1,6 +1,6 @@
 apiVersion: v2
 name: httpcomponents-client
-description: A Helm chart for Kubernetes
+description:  HttpClient is a library for client-side HTTP communication built on HttpCore. It provides connection management, cookie management, and authentication. This is the successor to the widely used Jakarta Commons HttpClient 3.1.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

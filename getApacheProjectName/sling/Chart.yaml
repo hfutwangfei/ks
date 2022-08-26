@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sling
-description: A Helm chart for Kubernetes
+description:    Apache Sling is a web framework that uses a Java Content Repository, such as Apache Jackrabbit,    to store and manage content.   Sling applications use either scripts or Java servlets, selected based on simple name conventions,    to process HTTP requests in a RESTful way.   The embedded Apache Felix OSGi framework and console provide a dynamic runtime environment, where    code and content bu...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: uima
-description: A Helm chart for Kubernetes
+description: The Apache UIMA project supports the community working on the analysis of unstructured information with a unifying Java and C++ framework, tooling, and analysis components, guided by the OASIS UIMA standard. It includes support for very large scaleout using networked clusters of compute nodes.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

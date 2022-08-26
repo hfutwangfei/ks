@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sis-spatial-information-system
-description: A Helm chart for Kubernetes
+description: Apache SIS provides data structures for geographic data and associated metadata   along with methods to manipulate those data structures. The library is an implementation of GeoAPI interfaces   and can be used for desktop or server applications.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

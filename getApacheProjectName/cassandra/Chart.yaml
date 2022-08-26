@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cassandra
-description: A Helm chart for Kubernetes
+description: Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make Apache Cassandra the perfect platform for mission-critical data. Cassandras support for replicating across multiple datacenters is best-in-class.  Cassandra is in use at Netflix, Twitter, Urban Airship, Constant Contact, Reddit, Cisco, OpenX, Digg, CloudKick, Ooyala, and more companies that have large,...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

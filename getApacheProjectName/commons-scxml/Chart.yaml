@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-scxml
-description: A Helm chart for Kubernetes
+description:       An implementation of the State Chart XML specification aimed at creating      and maintaining a Java SCXML engine. It is capable of executing an environment      agnostic state machine defined using a SCXML document.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

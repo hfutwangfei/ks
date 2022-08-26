@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ignite
-description: A Helm chart for Kubernetes
+description: Apache Ignite is a distributed database for high-performance computing with in-memory speed.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

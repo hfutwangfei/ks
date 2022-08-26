@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-mrunit
-description: A Helm chart for Kubernetes
+description: The Apache MRUnit is a Java library that helps developers unit test Apache Hadoop map reduce jobs.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

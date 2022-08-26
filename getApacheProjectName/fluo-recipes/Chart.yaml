@@ -1,6 +1,6 @@
 apiVersion: v2
 name: fluo-recipes
-description: A Helm chart for Kubernetes
+description: Apache Fluo Recipes build on the Fluo API to offer additional functionality to developers. They are published separately from Fluo on their own release schedule. This allows Fluo Recipes to iterate and innovate faster than Fluo (which will maintain a more minimal API on a slower release cycle). Fluo Recipes offers code to implement common patterns on top of Fluos API. It also offers glue code to e...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: spark
-description: A Helm chart for Kubernetes
+description: Apache Spark is a fast and general engine for large-scale data processing. It offers high-level APIs in Java, Scala, Python and R, as well as a rich set of libraries including stream processing, machine learning, and graph analytics.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

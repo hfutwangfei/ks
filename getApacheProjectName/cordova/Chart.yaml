@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cordova
-description: A Helm chart for Kubernetes
+description: Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

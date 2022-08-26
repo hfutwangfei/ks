@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jmeter
-description: A Helm chart for Kubernetes
+description: Apache JMeter may be used to test performance both on static and dynamic resources (files, Servlets, Perl scripts, Java Objects, Data Bases and Queries, FTP Servers and more). It can be used to simulate a heavy load on a server, network or object to test its strength or to analyze overall performance under different load types. You can use it to make a graphical analysis of performance or to test ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

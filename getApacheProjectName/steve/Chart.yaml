@@ -1,6 +1,6 @@
 apiVersion: v2
 name: steve
-description: A Helm chart for Kubernetes
+description: Apache STeVe is a collection of online voting tools, used by the ASF, to handle STV and other voting methods.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

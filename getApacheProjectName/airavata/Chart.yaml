@@ -1,6 +1,6 @@
 apiVersion: v2
 name: airavata
-description: A Helm chart for Kubernetes
+description: Apache Airavata is a micro-service architecture based software framework for       executing and managing computational jobs and workflows on distributed computing       resources including local clusters, supercomputers, national grids, academic and       commercial clouds. Airavata is dominantly used to build Web-based science gateways and       assist to compose, manage, execute, and monitor la...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

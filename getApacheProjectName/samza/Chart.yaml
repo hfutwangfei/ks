@@ -1,6 +1,6 @@
 apiVersion: v2
 name: samza
-description: A Helm chart for Kubernetes
+description: Apache Samza provides a system for processing stream data from publish-subscribe systems such as Apache Kafka. The developer writes a stream processing task, and executes it as a Samza job. Samza then routes messages between stream processing tasks and the publish-subscribe systems that the messages are addressed to.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

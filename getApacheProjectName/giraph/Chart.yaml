@@ -1,6 +1,6 @@
 apiVersion: v2
 name: giraph
-description: A Helm chart for Kubernetes
+description: Apache Giraph is an iterative graph processing system built for high scalability. For example, it is currently used at Facebook to analyze the social graph formed by users and their connections. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

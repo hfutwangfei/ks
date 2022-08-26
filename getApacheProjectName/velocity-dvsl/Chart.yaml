@@ -1,6 +1,6 @@
 apiVersion: v2
 name: velocity-dvsl
-description: A Helm chart for Kubernetes
+description: DVSL (Declarative Velocity Style Language) is a tool modeled after XSLT and is intended for general XML transformations using the Velocity Template Language as the templating language for the transformations. The key differences are that it incorporates easy access to Java objects and allows you to use the Velocity template language and its features for expressing the transformation templates.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

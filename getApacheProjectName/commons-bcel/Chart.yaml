@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-bcel
-description: A Helm chart for Kubernetes
+description:  The Byte Code Engineering Library is intended to give users a convenient possibility to analyze, create, and manipulate (binary) Java class files (those ending with .class). Classes are represented by objects which contain all the symbolic information of the given class-- methods, fields and byte code instructions, in particular.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

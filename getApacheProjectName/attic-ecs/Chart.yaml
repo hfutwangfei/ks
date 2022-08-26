@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-ecs
-description: A Helm chart for Kubernetes
+description: The Element Construction Set is a Java API for generating elements for various markup languages it directly supports HTML 4.0 and XML, but can easily be extended to create tags for any markup language.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

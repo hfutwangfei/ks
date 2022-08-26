@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-etch
-description: A Helm chart for Kubernetes
+description: Etch is a cross-platform, language- and transport-independent framework for building and consuming network services. The Etch toolset includes a network service description language, a compiler, and binding libraries for a variety of programming languages. Etch is also transport-independent, allowing for a variety of different transports to be used based on need and circumstance. The goal of Etch ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: couchdb
-description: A Helm chart for Kubernetes
+description: Apache CouchDB is a database that completely embraces the web. Store your data with JSON documents. Access your documents with your web browser, via HTTP. Query, combine, and transform your documents with JavaScript. Apache CouchDB works well with modern web and mobile apps. CouchDBs killer feature is its ability to distribute data efficiently using Apache CouchDB’s incremental replication. Apac...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

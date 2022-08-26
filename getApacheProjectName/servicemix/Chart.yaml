@@ -1,6 +1,6 @@
 apiVersion: v2
 name: servicemix
-description: A Helm chart for Kubernetes
+description: Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own integrations solutions. It provides a complete, enterprise ready ESB exclusively powered by OSGi.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

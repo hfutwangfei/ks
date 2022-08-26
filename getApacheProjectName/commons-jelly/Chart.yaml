@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-jelly
-description: A Helm chart for Kubernetes
+description: Jelly is a Java and XML based scripting engine. Jelly combines the best ideas from JSTL, Velocity, DVSL, Ant and Cocoon all together in a simple yet powerful scripting engine.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

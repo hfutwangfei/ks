@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-collections
-description: A Helm chart for Kubernetes
+description: Types that extend and augment the Java Collections Framework.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

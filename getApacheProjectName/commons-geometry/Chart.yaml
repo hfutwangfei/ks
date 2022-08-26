@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-geometry
-description: A Helm chart for Kubernetes
+description: Geometry.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

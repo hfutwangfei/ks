@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-ode
-description: A Helm chart for Kubernetes
+description: Apache ODE (Orchestration Director Engine) executes business processes written following the WS-BPEL standard. It talks to web services, sending and receiving messages, handling data manipulation and error recovery as described by your process definition. It supports both long and short living process executions to orchestrate all the services that are part of your application.  WS-BPEL is an XML-...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: myfaces
-description: A Helm chart for Kubernetes
+description: MyFaces is the free open source implementation of Jakarta Server Faces, a web application framework that accomplishes the MVC paradigm. It is comparable to the well-known Struts Framework but has features and concepts that are beyond those of Struts - especially the component orientation.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

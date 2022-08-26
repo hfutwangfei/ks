@@ -1,6 +1,6 @@
 apiVersion: v2
 name: camel
-description: A Helm chart for Kubernetes
+description: Camel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data
 
 # A chart can be either an 'application' or a 'library' chart.
 #

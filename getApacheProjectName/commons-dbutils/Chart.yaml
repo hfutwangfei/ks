@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-dbutils
-description: A Helm chart for Kubernetes
+description: A package of Java utility classes for easing JDBC development
 
 # A chart can be either an 'application' or a 'library' chart.
 #

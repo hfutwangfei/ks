@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jspwiki
-description: A Helm chart for Kubernetes
+description:    Apache JSPWiki is a feature-rich and extensible WikiWiki engine built around the standard JEE    components (Java, servlets, JSP). It features--   - WikiMarkupStructured Text   - File attachments    - Templates support   - Data storage through 2 WikiPage Providers, with the capability to plug new ones   - Security-- Authorization and authentication fine grain control   - Easy plugin and page fi...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

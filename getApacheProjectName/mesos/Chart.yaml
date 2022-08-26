@@ -1,6 +1,6 @@
 apiVersion: v2
 name: mesos
-description: A Helm chart for Kubernetes
+description: Apache Mesos is a cluster manager that provides efficient resource isolation  and sharing across distributed applications, or frameworks. It can run Hadoop,  MPI, Hypertable, Spark, and other frameworks on a dynamically shared pool of  nodes. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

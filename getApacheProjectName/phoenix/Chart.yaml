@@ -1,6 +1,6 @@
 apiVersion: v2
 name: phoenix
-description: A Helm chart for Kubernetes
+description: Apache Phoenix enables OLTP and operational analytics for Apache Hadoop by providing a relational database layer leveraging Apache HBase as its backing store. It includes integration with Apache Spark, Pig, Flume, Map Reduce, and other products in the Hadoop ecosystem. It is accessed as a JDBC driver and enables querying, updating, and managing HBase tables through standard SQL.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

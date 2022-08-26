@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tika
-description: A Helm chart for Kubernetes
+description: The Apache Tika toolkit is an ASFv2 licensed open source tool for extracting information      from digital documents. Tika allows search engines, content management systems and other      applications that work with various kinds of digital documents to easily detect and extract      metadata and content from all major file formats.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

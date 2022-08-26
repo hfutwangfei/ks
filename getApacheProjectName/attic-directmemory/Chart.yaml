@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-directmemory
-description: A Helm chart for Kubernetes
+description: Apache DirectMemory is a off-heap cache for the Java Virtual Machine
 
 # A chart can be either an 'application' or a 'library' chart.
 #

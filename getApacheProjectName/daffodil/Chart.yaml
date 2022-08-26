@@ -1,6 +1,6 @@
 apiVersion: v2
 name: daffodil
-description: A Helm chart for Kubernetes
+description: Apache Daffodil is an open-source implementation of   the DFDL specification that uses DFDL data descriptions to parse   fixed format data into an infoset. This infoset is commonly converted   into XML or JSON to enable the use of   well-established XML or JSON technologies and libraries to   consume, inspect, and manipulate fixed format data in existing   solutions. Daffodil is also capable of se...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

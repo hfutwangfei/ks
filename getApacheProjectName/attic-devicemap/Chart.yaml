@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-devicemap
-description: A Helm chart for Kubernetes
+description: Apache Devicemap is a data repository containing devices attributes, and their related browsers, and operating systems. The project also maintains an api to classify these attributes. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

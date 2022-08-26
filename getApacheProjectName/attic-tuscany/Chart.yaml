@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-tuscany
-description: A Helm chart for Kubernetes
+description: Apache Tuscany simplifies the task of developing SOA solutions by providing a comprehensive infrastructure for SOA development and management that is based on Service Component Architecture (SCA) standard. With SCA as its foundation, Tuscany offers solution developers the following advantages--      Provides a model for creating composite applications by defining the services in the fabric and the...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jena
-description: A Helm chart for Kubernetes
+description: Apache Jena provides a complete framework for building Semantic Web and Linked Data applications in Java, and provides-- parsers for RDFXML, Turtle and N-triples; a Java programming API; a complete implementation of the SPARQL query language; a rule-based inference engine for RDFS and OWL entailments; TDB (a non-SQL persistent triple store); SDB (a persistent triples store built on a relational st...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: juddi-scout
-description: A Helm chart for Kubernetes
+description: Apache Scout is an implementation of the JSR 93 (JAXR). It provides an implementation to access UDDI registries (particularly Apache jUDDI) in a standard way.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

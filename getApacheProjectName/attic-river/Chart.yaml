@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-river
-description: A Helm chart for Kubernetes
+description: Apache River software provides a JINI service, which is a service oriented architecture that defines a programming model which both exploits and extends Java technology to enable the construction of secure, distributed systems consisting of federations of services and clients. Jini technology can be used to build adaptive network systems that are scalable, evolvable and flexible as typically requi...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

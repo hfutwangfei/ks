@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tcl-rivet
-description: A Helm chart for Kubernetes
+description: Apache Rivet is a system for creating dynamic web content via the Tcl programming language integrated with Apache Web Server. It is designed to be fast, powerful and extensible, consume few system resources, be easy to learn, and to provide the user with a platform that can also be used for other programming tasks outside the web (GUIs, system administration tasks, text processing, database manipu...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

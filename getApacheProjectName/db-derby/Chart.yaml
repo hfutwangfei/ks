@@ -1,6 +1,6 @@
 apiVersion: v2
 name: db-derby
-description: A Helm chart for Kubernetes
+description: Apache Derby is an open source relational database implemented entirely in Java. It has a small footprint that makes it easy to embed in any Java-based application, but it also supports the more familiar clientserver mode. It is based on the Java, JDBC, and SQL standards, making code developed more portable to standards-compliant databases.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: isis
-description: A Helm chart for Kubernetes
+description: Apache Isis is a framework for rapidly developing domain-driven apps in Java. Write your business logic in entities, domain services and repositories, and the framework dynamically (at runtime) generates a representation of that domain model as a webapp or as a RESTful API. For prototyping or production.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

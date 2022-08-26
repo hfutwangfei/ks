@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-csv
-description: A Helm chart for Kubernetes
+description:    The Apache Commons CSV library provides a simple interface for reading and writing   CSV files of various types.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: flume
-description: A Helm chart for Kubernetes
+description: Apache Flume is a distributed, reliable, and available system for efficiently collecting, aggregating and moving large amounts of log data from many different sources to a centralized data store
 
 # A chart can be either an 'application' or a 'library' chart.
 #

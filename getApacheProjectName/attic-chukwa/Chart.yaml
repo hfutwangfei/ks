@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-chukwa
-description: A Helm chart for Kubernetes
+description:  Chukwa is an open source data collection system for monitoring  large distributed systems. Chukwa is built on top of  the Hadoop Distributed File System (HDFS) and MapReduce framework  and inherits Hadoop’s scalability and robustness. Chukwa also includes  a ﬂexible and powerful toolkit for displaying, monitoring and analyzing  results to make the best use of the collected data.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

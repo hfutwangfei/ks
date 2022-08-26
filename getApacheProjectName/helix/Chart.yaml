@@ -1,6 +1,6 @@
 apiVersion: v2
 name: helix
-description: A Helm chart for Kubernetes
+description: Apache Helix is a generic cluster management framework used for the automatic management of partitioned, replicated and distributed resources hosted on a cluster of nodes. Helix automates reassignment of resources in the face of node failure and recovery, cluster expansion, and reconfiguration.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

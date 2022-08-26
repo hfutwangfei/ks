@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cocoon
-description: A Helm chart for Kubernetes
+description: Apache Cocoon is a web development framework built around the concepts of separation of concerns (making sure people can interact and collaborate on a project, without stepping on each other toes) and component-based web development. Cocoon implements these concepts around the notion of "component pipelines", each component on the pipeline specializing on a particular operation. This makes it poss...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

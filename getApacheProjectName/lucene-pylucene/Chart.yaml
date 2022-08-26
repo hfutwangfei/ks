@@ -1,6 +1,6 @@
 apiVersion: v2
 name: lucene-pylucene
-description: A Helm chart for Kubernetes
+description: PyLucene is a Python extension for accessing Java Lucene TM. Its goal is to allow you to use Lucenes text indexing and searching capabilities from Python.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

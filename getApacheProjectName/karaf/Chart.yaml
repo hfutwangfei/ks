@@ -1,6 +1,6 @@
 apiVersion: v2
 name: karaf
-description: A Helm chart for Kubernetes
+description: Apache Karaf is a small OSGi based runtime which provides a lightweight container onto which various components and applications can be deployed.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

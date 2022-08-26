@@ -1,6 +1,6 @@
 apiVersion: v2
 name: kibble
-description: A Helm chart for Kubernetes
+description: Apache Kibble is a suite of tools for collecting, aggregating and visualizing activity in software projects. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

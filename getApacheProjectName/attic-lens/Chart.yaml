@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-lens
-description: A Helm chart for Kubernetes
+description: Lens provides an Unified Analytics interface. Lens aims to cut the Data Analytics silos by providing a single view of data across multiple tiered data stores and optimal execution environment for the analytical query. It seamlessly integrates Hadoop with traditional data warehouses to appear like one.     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-vss
-description: A Helm chart for Kubernetes
+description: The Apache VSS Antlib provides an interface to the Microsoft Visual SourceSafe SCM. The original Ant tasks have been expanded upon in this Antlib. Some fixes to issues in the original tasks have also been incorporated.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

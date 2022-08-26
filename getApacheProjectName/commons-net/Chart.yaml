@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-net
-description: A Helm chart for Kubernetes
+description:      Apache Commons Net library contains a collection of network utilities and protocol implementations.     Supported protocols include-- Echo, Finger, FTP, NNTP, NTP, POP3(S), SMTP(S), Telnet, Whois     
 
 # A chart can be either an 'application' or a 'library' chart.
 #

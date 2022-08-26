@@ -1,6 +1,6 @@
 apiVersion: v2
 name: archiva
-description: A Helm chart for Kubernetes
+description: Archiva is the perfect companion for build tools such as Maven, Continuum, and ANT. Archiva offers several capabilities, amongst which remote repository proxying, security access management, build artifact storage, delivery, browsing, indexing and usage reporting, extensible scanning functionality and many more!
 
 # A chart can be either an 'application' or a 'library' chart.
 #

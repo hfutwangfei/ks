@@ -1,6 +1,6 @@
 apiVersion: v2
 name: iotdb
-description: A Helm chart for Kubernetes
+description: Apache IoTDB (Database for Internet of Things) is an integrated data management engine designed for time series data. It provides users with services for data collection, storage and analysis. Due to its light-weight architecture, high performance and rich feature set together with its deep integration with Apache Hadoop, Spark and Flink. Apache IoTDB can meet the requirements of massive data stor...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

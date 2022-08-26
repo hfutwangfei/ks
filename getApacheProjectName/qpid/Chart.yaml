@@ -1,6 +1,6 @@
 apiVersion: v2
 name: qpid
-description: A Helm chart for Kubernetes
+description: Apache Qpid implements the latest AMQP specification, the first open standard for enterprise messaging, and provides transaction management, queuing, distribution, security, management, clustering, federation and heterogeneous multi-platform support and a lot more.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

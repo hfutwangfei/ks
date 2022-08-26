@@ -1,6 +1,6 @@
 apiVersion: v2
 name: creadur-whisker
-description: A Helm chart for Kubernetes
+description: Apache Whisker allows an application to models the licensing characteristics of the contents of its distributions. Use cases are auditing the model against the contents of a distribution, reporting on the contents of a distribution and generation licensing documents (LICENSE, NOTICE and so on) for a distribution. Whisker distributes tooling for the command line and build system such as Maven.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

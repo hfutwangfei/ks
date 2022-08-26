@@ -1,6 +1,6 @@
 apiVersion: v2
 name: serf
-description: A Helm chart for Kubernetes
+description: The serf library is a high performance C-based HTTP client library built upon the Apache Portable Runtime (APR) library
 
 # A chart can be either an 'application' or a 'library' chart.
 #

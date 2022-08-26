@@ -1,6 +1,6 @@
 apiVersion: v2
 name: plc4x
-description: A Helm chart for Kubernetes
+description: PLC4X is a set of libraries for communicating with industrial programmable logic controllers (PLCs) using a variety of protocols but with a shared API.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

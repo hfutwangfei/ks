@@ -1,6 +1,6 @@
 apiVersion: v2
 name: knox
-description: A Helm chart for Kubernetes
+description: The Apache Knox Gateway is a REST API Gateway for interacting with Hadoop clusters.  The Knox Gateway provides a single access point for all REST interactions with Hadoop clusters.  In this capacity, the Knox Gateway is able to provide valuable functionality to aid in the control, integration, monitoring and automation of critical administrative and analytical needs of the enterprise.  Authenticat...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

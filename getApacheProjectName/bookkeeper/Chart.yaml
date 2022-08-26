@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bookkeeper
-description: A Helm chart for Kubernetes
+description: BookKeeper is a reliable replicated log service. It can be used to turn any standalone service into a highly available replicated service. BookKeeper is highly available (no single point of failure), and scales horizontally as more storage nodes are added.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

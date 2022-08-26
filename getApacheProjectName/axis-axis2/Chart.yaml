@@ -1,6 +1,6 @@
 apiVersion: v2
 name: axis-axis2
-description: A Helm chart for Kubernetes
+description: Apache Axis2 is a toolkit for creating and using Web Services, including SOAP, MTOM, XMLHTTP and advanced WS-* standards such as WSRM and WSSecurity.     Axis2 includes a very fast runtime engine, together with tooling support for WSDL and WS-Policy, and plugin support for WS-Addressing, WS-ReliableMessaging, WS-Security,      WS-Eventing, WS-Transactions, WS-Trust and WS-SecureConversation.     A...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

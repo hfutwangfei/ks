@@ -1,6 +1,6 @@
 apiVersion: v2
 name: directory-fortress
-description: A Helm chart for Kubernetes
+description: Apache Fortress is a standards-based authorization system, written in Java, that provides role-based access control, delegated administration and password policy services using an LDAP backend.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

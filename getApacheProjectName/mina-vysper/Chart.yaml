@@ -1,6 +1,6 @@
 apiVersion: v2
 name: mina-vysper
-description: A Helm chart for Kubernetes
+description: Apache Vysper aims to be a modular, full featured XMPP (Jabber) server. Vysper is implemented in Java.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

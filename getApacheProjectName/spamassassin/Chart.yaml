@@ -1,6 +1,6 @@
 apiVersion: v2
 name: spamassassin
-description: A Helm chart for Kubernetes
+description: Apache SpamAssassin is an extensible email filter which is used to identify spam. Using its rule base, it uses a wide range of advanced heuristic and statistical analysis tests on mail headers and body text to identify "spam", also known as unsolicited bulk email. Once identified, the mail can then be optionally tagged as spam for later filtering. It provides a command line tool to perform filteri...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

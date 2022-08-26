@@ -1,6 +1,6 @@
 apiVersion: v2
 name: velocity-texen
-description: A Helm chart for Kubernetes
+description: Texen is a general purpose text generating utility. It is capable of producing almost any sort of text output. Driven by Ant, essentially an Ant Task, Texen uses a control template, an optional set of worker templates, and control context to govern the generated output. Although TexenTask can be used directly, it is usually subclassed to initialize your control context before generating any output...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

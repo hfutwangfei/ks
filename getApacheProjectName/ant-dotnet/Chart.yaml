@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-dotnet
-description: A Helm chart for Kubernetes
+description: This is a library of Ant tasks that help developing .NET software.  It includes the "old" .NET tasks like a C# compiler task but also comes with support for NUnit testing or running the popular NAnt or MSBuild build tools.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

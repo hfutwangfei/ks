@@ -1,6 +1,6 @@
 apiVersion: v2
 name: wicket
-description: A Helm chart for Kubernetes
+description: With proper mark-uplogic separation, a POJO data model, and a refreshing lack of XML, Apache Wicket makes developing web-apps simple and enjoyable again. Swap the boilerplate, complex debugging and brittle code for powerful, reusable components written with plain Java and HTML.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

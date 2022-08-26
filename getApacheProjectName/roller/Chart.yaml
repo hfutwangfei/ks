@@ -1,6 +1,6 @@
 apiVersion: v2
 name: roller
-description: A Helm chart for Kubernetes
+description: Apache Roller is a full-featured, multi-user and group-blog server suitable for blog sites large and small. It runs as a Java web application that should be able to run on most any Java EE server and relational database. Rollers installation guide covers deployment on Tomcat, GlassFish, and JBoss application servers using a MySQL, Derby, or PostgreSQL database. Users however have reported success ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

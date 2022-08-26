@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-marmotta
-description: A Helm chart for Kubernetes
+description: The goal of Apache Marmotta is to provide an open implementation of a Linked Data Platform that can be used, extended and deployed easily by organizations who want to publish Linked Data or build custom applications on Linked Data
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: openwebbeans
-description: A Helm chart for Kubernetes
+description: OpenWebBeans is an ALv2-licensed implementation of the "Contexts and Dependency Injection for the Java EE platform" specification which is defined as JSR-299.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

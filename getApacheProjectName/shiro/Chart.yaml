@@ -1,6 +1,6 @@
 apiVersion: v2
 name: shiro
-description: A Helm chart for Kubernetes
+description: Apache Shiro is a powerful and flexible open-source security framework that cleanly handles   authentication, authorization, enterprise session management, single sign-on and cryptography services.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

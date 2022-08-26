@@ -1,6 +1,6 @@
 apiVersion: v2
 name: directory
-description: A Helm chart for Kubernetes
+description: The Apache Directory project provides directory solutions entirely written in Java. These include a directory server, which has been certified as LDAP v3 compliant by the Open Group (ApacheDS), and Eclipse-based directory tools (Apache Directory Studio).
 
 # A chart can be either an 'application' or a 'library' chart.
 #

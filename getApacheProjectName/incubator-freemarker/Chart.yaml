@@ -1,6 +1,6 @@
 apiVersion: v2
 name: incubator-freemarker
-description: A Helm chart for Kubernetes
+description:      Apache FreeMarker is a template engine-- a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.     Templates are written in the FreeMarker Template Language (FTL), which is a simple, specialized language (not a full-blown programming language).     Usually, a general-purpose programming language (like Jav...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

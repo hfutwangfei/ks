@@ -1,6 +1,6 @@
 apiVersion: v2
 name: hive
-description: A Helm chart for Kubernetes
+description: The Apache Hive (TM) data warehouse software facilitates querying and managing large datasets residing in distributed storage. Built on top of Apache Hadoop (TM), it provides  * tools to enable easy data extracttransformload (ETL) * a mechanism to impose structure on a variety of data formats * access to files stored either directly in Apache HDFS (TM) or in other data storage systems such as Apac...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

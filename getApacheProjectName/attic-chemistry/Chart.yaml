@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-chemistry
-description: A Helm chart for Kubernetes
+description: Apache Chemistry provides open source implementations of the Content Management Interoperability Services (CMIS) specification. Libraries are available for Java, Python, PHP and .NET.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

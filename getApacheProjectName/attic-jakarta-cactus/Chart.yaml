@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-jakarta-cactus
-description: A Helm chart for Kubernetes
+description: The intent of Cactus is to lower the cost of writing tests for server-side code. It uses JUnit and extends it.  Cactus implements an in-container strategy, meaning that tests are executed inside the container. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

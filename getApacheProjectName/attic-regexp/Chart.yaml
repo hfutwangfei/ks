@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-regexp
-description: A Helm chart for Kubernetes
+description: 100% Pure Java Regular Expression package
 
 # A chart can be either an 'application' or a 'library' chart.
 #

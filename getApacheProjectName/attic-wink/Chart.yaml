@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-wink
-description: A Helm chart for Kubernetes
+description: Apache Wink is a simple yet solid framework for building RESTful Web services. It is comprised of a Server module and a Client module for developing and consuming RESTful Web services. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

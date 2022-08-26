@@ -1,6 +1,6 @@
 apiVersion: v2
 name: orc
-description: A Helm chart for Kubernetes
+description: ORC is a self-describing type-aware columnar file format designed for Hadoop workloads. It is optimized for large streaming reads, but with integrated support for finding required rows quickly. Storing data in a columnar format lets the reader read, decompress, and process only the values that are required for the current query.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

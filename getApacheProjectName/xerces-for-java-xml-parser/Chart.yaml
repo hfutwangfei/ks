@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xerces-for-java-xml-parser
-description: A Helm chart for Kubernetes
+description:         Xerces-J is a high performance, fully compliant validating XML parser written in Java. It is a fully conforming XML Schema processor that includes a complete implementation of the Document Object Model Level 3 Core and LoadSave W3C Recommendations and provides a complete implementation of the XML Inclusions (XInclude) W3C Recommendation. It also provides support for OASIS XML Catalogs v1.1...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

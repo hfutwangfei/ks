@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ant-props
-description: A Helm chart for Kubernetes
+description: The Apache Props Antlib is a library of supplementary handlers for Apache Ant properties resolution.  The types provided are instances of org.apache.tools.ant.PropertyHelper.Delegate and can be invoked using the <propertyhelper> task provided in Ant 1.8.0.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: drill
-description: A Helm chart for Kubernetes
+description: Apache Drill is a distributed MPP query layer that supports SQL and alternative query languages against NoSQL and Hadoop data storage systems. It was inspired in part by Googles Dremel.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: xerces-xml-commons-external
-description: A Helm chart for Kubernetes
+description: The External components portion of Apache XML Commons contains interfaces that are defined by external standards organizations. For DOM, thats the W3C; for SAX its David Megginson (http--www.saxproject.org); for JAXP its Sun. While we could send users to each of the primary sources for these deliverables, keeping our own versions of these in the XML Commons repository gives us a number of advantag...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

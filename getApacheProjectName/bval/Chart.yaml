@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bval
-description: A Helm chart for Kubernetes
+description: The goal of the Apache BVal project is to deliver an implementation of the Java Bean Validation Specfication (JSR303346) which is TCK compliant and works on Java SE 6 or later. The initial codebase for the project was donated to the ASF by a SGA from Agimatec GmbH and uses the Apache Software License v2.0.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

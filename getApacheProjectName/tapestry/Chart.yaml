@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tapestry
-description: A Helm chart for Kubernetes
+description: Tapestry is a component-oriented Java web application framework.     Its design emphasizes ease of use and developer productivity. Component     classes are simple POJOs, with Tapestry using byte code manipulation to     enhance classes at runtime. Configuration is via annotations and naming     conventions rather than XML. Web page and component templates use regular     (X)HTML that can be edite...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

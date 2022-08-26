@@ -1,6 +1,6 @@
 apiVersion: v2
 name: empire-db
-description: A Helm chart for Kubernetes
+description:  	Apache Empire-db is intended for developers who strive to have full SQL freedom when  	formulating queries and DML-Statements - without ever having to use string literals - 	and who also want to be able to control when and how statements are executed.   	Unlike other approaches Empire-db does not rely on Java Annotations or Mapping-files 	for building queries but rather uses a Java Object model ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

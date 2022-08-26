@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-excalibur
-description: A Helm chart for Kubernetes
+description: The predecessor of Apache Avalon, Apache Excalibur hosts the Avalon framework, a Java container framework, the Excalibur and Fortress inversion of control containers, and a rich library of components.  Excalibur code powers Apache James and Cocoon and numerous other open source and commercial projects.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

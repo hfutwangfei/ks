@@ -1,6 +1,6 @@
 apiVersion: v2
 name: maven-doxia
-description: A Helm chart for Kubernetes
+description: Doxia is a content generation framework which aims to provide its users with powerful techniques for generating static and dynamic content-- Doxia can be used in web-based publishing context to generate static sites, in addition to being incorporated into dynamic content generation systems like blogs, wikis and content management systems.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: guacamole
-description: A Helm chart for Kubernetes
+description: Apache Guacamole is a clientless remote desktop gateway       which supports standard protocols like VNC, RDP, and SSH. We call       it "clientless" because no plugins or client software are required.       Once Guacamole is installed on a server, all you need to access       your desktops is a web browser.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

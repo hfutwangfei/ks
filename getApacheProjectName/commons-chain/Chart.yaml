@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-chain
-description: A Helm chart for Kubernetes
+description: An implmentation of the GoF Chain of Responsibility pattern
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: struts
-description: A Helm chart for Kubernetes
+description: The Apache Struts Project offers the Apache Struts 2 web framework which is a comprehensive and modular tooling stack for creating web-based Java applications. Struts 2, emerged from the WebWork 2 framework, is an excellent choice for teams who value elegant solutions to difficult problems. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

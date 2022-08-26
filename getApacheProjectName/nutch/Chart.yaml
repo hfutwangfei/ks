@@ -1,6 +1,6 @@
 apiVersion: v2
 name: nutch
-description: A Helm chart for Kubernetes
+description: Apache Nutch is a highly extensible and scalable open source web crawler software project. Stemming from Apache Lucene, Nutch is a well matured, production ready batch crawler relying on Apache Hadoop data structures, which are great for batch processing. Nutch has a modular architecture and provides pluggable and extensible interfaces such as Parse, Index and ScoringFilters for custom implementat...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

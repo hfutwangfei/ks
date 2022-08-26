@@ -1,6 +1,6 @@
 apiVersion: v2
 name: db-torque
-description: A Helm chart for Kubernetes
+description: Torque is an object-relational mapper for Java. In other words, Torque lets you access and manipulate data in a relational database using java objects. Unlike most other object-relational mappers, Torque does not use reflection to access user-provided classes, but it generates the necessary classes (including the Data Objects) from an XML schema describing the database layout (which can either be ...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

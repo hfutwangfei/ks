@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-digester
-description: A Helm chart for Kubernetes
+description:      The Digester package lets you configure an XML->Java object mapping module     which triggers certain actions called rules whenever a particular      pattern of nested XML elements is recognized.   
 
 # A chart can be either an 'application' or a 'library' chart.
 #

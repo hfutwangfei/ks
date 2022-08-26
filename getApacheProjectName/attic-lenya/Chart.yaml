@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-lenya
-description: A Helm chart for Kubernetes
+description: Apache Lenya is an Open Source JavaXML Content Management Framework and comes with revision control, site management, scheduling, search, WYSIWYG editors, and workflow.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

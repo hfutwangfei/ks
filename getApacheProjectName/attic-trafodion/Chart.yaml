@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-trafodion
-description: A Helm chart for Kubernetes
+description: Trafodion builds on the scalability, elasticity, and flexibility of Hadoop. Trafodion extends Hadoop to provide guaranteed transactional integrity, enabling new kinds of big data applications to run on Hadoop.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

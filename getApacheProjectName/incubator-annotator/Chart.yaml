@@ -1,6 +1,6 @@
 apiVersion: v2
 name: incubator-annotator
-description: A Helm chart for Kubernetes
+description: Apache Annotator is a collaborative community for creating annotation related code which works to provide a future for Annotator.js-based projects and plugins while enabling W3C spec-compliant Web Annotation in Web browsers, Web Publication readers, and the servers that serve them.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

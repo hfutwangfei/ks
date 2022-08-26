@@ -1,6 +1,6 @@
 apiVersion: v2
 name: commons-math
-description: A Helm chart for Kubernetes
+description: The Math project is a library of lightweight, self-contained mathematics and statistics components addressing the most common practical problems not immediately available in the Java programming language or commons-lang.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: oozie
-description: A Helm chart for Kubernetes
+description: Oozie is a workflow scheduler system to manage Apache Hadoop jobs. Oozie is integrated with the rest of the Hadoop stack supporting several types of Hadoop jobs out of the box (such as Java map-reduce, Streaming map-reduce, Pig, Hive, Sqoop and Distcp) as well as system specific jobs (such as Java programs and shell scripts).
 
 # A chart can be either an 'application' or a 'library' chart.
 #

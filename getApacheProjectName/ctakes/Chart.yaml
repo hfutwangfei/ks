@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ctakes
-description: A Helm chart for Kubernetes
+description: Apache clinical Text Analysis and Knowledge Extraction System (cTAKES) is an open-source natural language processing system for information extraction from electronic medical record clinical free-text. It processes clinical notes, identifying types of clinical named entities from various dictionaries including the Unified Medical Language System (UMLS) - medications, diseasesdisorders, signssympto...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

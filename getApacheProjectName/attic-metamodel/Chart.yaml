@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-metamodel
-description: A Helm chart for Kubernetes
+description: With MetaModel you get a uniform connector and query API to many very different datastore types, including-- Relational (JDBC) databases, CSV files, Excel spreadsheets, XML files, JSON files, Fixed width files, MongoDB, Apache CouchDB, Apache HBase, Apache Cassandra, ElasticSearch, OpenOffice.org databases, Salesforce.com, SugarCRM and even collections of plain old Java objects (POJOs).  MetaModel...
 
 # A chart can be either an 'application' or a 'library' chart.
 #

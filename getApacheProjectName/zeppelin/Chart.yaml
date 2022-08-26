@@ -1,6 +1,6 @@
 apiVersion: v2
 name: zeppelin
-description: A Helm chart for Kubernetes
+description: Zeppelin is a modern web-based tool for the data scientists to collaborate over large-scale data exploration and visualization projects. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-wookie
-description: A Helm chart for Kubernetes
+description: Apache Wookie is a Java server application that allows you to upload and deploy widgets for your applications; widgets can not only include all the usual kinds of mini-applications, badges, and gadgets, but also fully-collaborative applications such as chats, quizzes, and games.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-oltu---parent
-description: A Helm chart for Kubernetes
+description: Apache Oltu is an OAuth protocol implementation in Java.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

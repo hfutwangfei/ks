@@ -1,6 +1,6 @@
 apiVersion: v2
 name: libcloud
-description: A Helm chart for Kubernetes
+description: Apache Libcloud is a standard Python library that abstracts away differences among multiple cloud provider APIs. It allows users to manage cloud servers, cloud storage and load-balancers.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

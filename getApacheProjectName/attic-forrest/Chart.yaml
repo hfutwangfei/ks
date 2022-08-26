@@ -1,6 +1,6 @@
 apiVersion: v2
 name: attic-forrest
-description: A Helm chart for Kubernetes
+description:  Apache Forrest™ software is a publishing framework that transforms input from various sources into a unified presentation in one or more output formats. The modular and extensible plug-in architecture of Apache Forrest is based on Apache Cocoon and the relevant industry standards that separate presentation from content. Forrest can generate static documents, or be used as a dynamic server, or b...
 
 # A chart can be either an 'application' or a 'library' chart.
 #
