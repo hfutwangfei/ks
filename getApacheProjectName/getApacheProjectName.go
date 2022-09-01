@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"sort"
 	"strings"
 )
 
@@ -74,10 +75,16 @@ func main() {
 	}
 
 	names := make(map[string]struct{})
-	desc := ""
-	for k, v := range result {
+	nameSlice := make([]string, 0, len(names))
+	for k := range result {
 		names[k] = struct{}{}
+		nameSlice = append(nameSlice, k)
+	}
 
+	sort.Strings(nameSlice)
+
+	desc := ""
+	for _, k := range nameSlice {
 		// log.Printf("k: %+v", k)
 		kk := strings.Replace(k, "_", "-", -1)
 		kk = strings.Replace(kk, "+", "p", -1)
@@ -92,7 +99,7 @@ func main() {
 			helmCreate(p)
 		case Sed:
 			desc = ""
-			desc = v.Description
+			desc = result[k].Description
 			desc = strings.ReplaceAll(desc, "\n      ", " ")
 			desc = strings.ReplaceAll(desc, "\n", " ")
 			desc = strings.ReplaceAll(desc, "'", "")
