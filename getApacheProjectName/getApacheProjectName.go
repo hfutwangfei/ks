@@ -10,12 +10,15 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"path"
 	"sort"
 	"strings"
 )
 
 var (
 	action string
+
+	projectDir string
 
 	cmds []string
 )
@@ -38,6 +41,7 @@ type Result map[string]*Detail
 
 func init() {
 	flag.StringVar(&action, "act", "", "act")
+	flag.StringVar(&projectDir, "dir", "project", "default project director: project")
 	log.SetFlags(log.Llongfile | log.Ltime)
 }
 
@@ -94,9 +98,19 @@ func main() {
 		// execCmd(kk)
 
 		p := kk
+		dir := path.Join(projectDir, p)
+		if _, err := os.Stat(dir); err != nil {
+			if os.IsNotExist(err) {
+				err := os.MkdirAll(dir, 0777)
+				if err != nil {
+					log.Printf("failed to create director %s err: %v", dir, err)
+					return
+				}
+			}
+		}
 		switch action {
 		case Create:
-			helmCreate(p)
+			helmCreate(dir)
 		case Sed:
 			desc = ""
 			desc = result[k].Description
@@ -114,12 +128,12 @@ func main() {
 			commands := sed(p, desc)
 			cmds = append(cmds, commands...)
 		case Package:
-			helmPackage(p)
+			helmPackage(dir)
 		}
 	}
 
 	if action == Sed {
-		genMakefile()
+		genMakefile(projectDir)
 	}
 
 	log.Printf("names: %+v", len(names))
@@ -131,7 +145,7 @@ func main() {
 func helmCreate(p string) {
 	cmd := exec.Command("helm", "create", p)
 	if err := cmd.Run(); err != nil {
-		log.Printf("failed to exec.Command err: %v", err)
+		log.Printf("failed to exec.Command %s err: %v", cmd.String(), err)
 		return
 	}
 	log.Println("exec.Command helm create")
@@ -195,8 +209,9 @@ func sed(p, desc string) (commands []string) {
 	return
 }
 
-func genMakefile() {
-	fi, err := os.Create("Makefile")
+func genMakefile(dir string) {
+	filename := path.Join(dir, "Makefile")
+	fi, err := os.Create(filename)
 	if err != nil {
 		log.Printf("failed to os.Create Makefile err: %v", err)
 		return
@@ -223,5 +238,5 @@ func helmPackage(p string) {
 		log.Printf("failed to exec.Command %s err: %v", cmd.String(), err)
 		return
 	}
-	log.Println("exec.Command helm package")
+	log.Printf("exec.Command helm package %s", cmd.String())
 }
