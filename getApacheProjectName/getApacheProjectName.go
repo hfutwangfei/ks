@@ -51,7 +51,7 @@ func main() {
 	if action != Create &&
 		action != Sed &&
 		action != Package {
-		fmt.Println("need -act.\nlike: -act=create, -act=sed, -act=package!!!")
+		fmt.Println("need -act.\nlike: -act=create, -act=sed, -act=package!!!\n\nan unneccessary arg dir.\nlike: -dir=project(default director)!!!")
 		return
 	}
 
