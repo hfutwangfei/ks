@@ -1,0 +1,23 @@
+deploy：demo  //配置文件选择
+DATASOURCE_URL：10.206.97.170:3386/dt-commercialization-demo  //数据库地址
+DATASOURCE_USERNAME： app   //数据库名称
+DATASOURCE_PASSWORD： Q)0lC)AF[Be5^)]]   //数据库密码
+
+REDIS_HOST：10.206.99.48  //redis地址
+REDIS_PORT：30620   //redis端口
+REDIS_PASSWORD：5yiTQj@Iki  //redis密码
+REDIS_DATABASE：3  //redis库
+
+
+MINIO_BUCKET：model-file-bucket  //minio桶名称
+MINIO_HOST：http://minio-storage-url.hdt.cosmoplat.com  //minio地址
+MINIO_ACCESS_KEY：admin  //minio用户名
+MINIO_SECRET_KEY：12345678  //minio密码
+
+DATAEASE_ADDR：https://dataease-dev.cosmoplat.com  //dataease地址
+
+----------------以下可以忽略---------------------------------------
+IOT_URL：http://openiot.hdt.cosmoplat.com
+LOGIN_URL：http://login-center-test.hdt.cosmoplat.com
+--------------------------------------------------------------------
+
