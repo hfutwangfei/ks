@@ -1,0 +1,11 @@
+      - mysql_user=app
+      - mysql_ip_port=10.206.97.170:3386
+      - mysql_database=dataease_test
+      - minio_bucket=dataease-dev
+      - minio_host=http://minio-storage-url.hdt.cosmoplat.com
+      - dt_studio_host=http://dt-co-server-test.hdt.cosmoplat.com
+      - share_address_url=http://dataease-dev.hdt.cosmoplat.com/link/
+      - redis_host=10.206.99.48
+      - redis_port=30620
+      - redis_password=5yiTQj@Iki
+      - redis_database=5
