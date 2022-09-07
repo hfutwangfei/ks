@@ -3,3 +3,5 @@
 .vscode/
 
 getApacheProjectName/getApacheProjectName
+
+d3os/data-analysis/docker/backend-1.9.0.jar
