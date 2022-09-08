@@ -27,8 +27,17 @@ spec:
       serviceAccountName: {{ include "mychart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      # wangfei: volume
+      volumes:
+      - name: configs
+        configMap:
+          name: {{ template "mychart.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
+          # wangfei: volume
+          volumeMounts:
+          - name: configs
+            mountPath: /usr/mychart/etc
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

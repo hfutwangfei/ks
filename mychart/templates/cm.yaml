@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "mychart.fullname" . }}
+  labels:
+    app: {{ template "mychart.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  application-token.txt: |-
+  {{- if .Values.applicationTokenTxt }}
+{{ tpl .Values.applicationTokenTxt . | indent 4 }}
+  {{- end }}
+  basic-realm.properties: |-
+  {{- if .Values.basicRealmProperties }}
+{{ tpl .Values.basicRealmProperties . | indent 4 }}
+  {{- end }}
+  credential-stores.properties: |-
+  {{- if .Values.credentialStoresProperties }}
+{{ tpl .Values.credentialStoresProperties . | indent 4 }}
+  {{- end }}
