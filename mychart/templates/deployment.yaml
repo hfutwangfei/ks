@@ -37,7 +37,7 @@ spec:
           # wangfei: volume
           volumeMounts:
           - name: configs
-            mountPath: /usr/mychart/etc
+            mountPath: /usr/dataspace/etc
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
