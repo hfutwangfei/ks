@@ -52,46 +52,46 @@ data:
 {{ tpl .Values.formRealmProperties . | indent 4 }}
   {{- end }}
   jdbc.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.jdbcProperties }}
+{{ tpl .Values.jdbcProperties . | indent 4 }}
   {{- end }}
   keystore-password.txt: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.keystorePasswordTxt }}
+{{ tpl .Values.keystorePasswordTxt . | indent 4 }}
   {{- end }}
   keystore.jks: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.keystoreJks }}
+{{ tpl .Values.keystoreJks . | indent 4 }}
   {{- end }}
   ldap-bind-password.txt: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.ldapBindPasswordTxt }}
+{{ tpl .Values.ldapBindPasswordTxt . | indent 4 }}
   {{- end }}
   ldap-login.conf: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.ldapLoginConf }}
+{{ tpl .Values.ldapLoginConf . | indent 4 }}
   {{- end }}
   remote-realm.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.remoteRealmProperties }}
+{{ tpl .Values.remoteRealmProperties . | indent 4 }}
   {{- end }}
   sdc-log4j.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.sdcLog4jProperties }}
+{{ tpl .Values.sdcLog4jProperties . | indent 4 }}
   {{- end }}
   sdc-security.policy: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.sdcSecurityPolicy }}
+{{ tpl .Values.sdcSecurityPolicy . | indent 4 }}
   {{- end }}
   sdc.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.sdcProperties }}
+{{ tpl .Values.sdcProperties . | indent 4 }}
   {{- end }}
   support-bundle-redactor.json: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.supportBundleRedactorJson }}
+{{ tpl .Values.supportBundleRedactorJson . | indent 4 }}
   {{- end }}
   vault.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
+  {{- if .Values.vaultProperties }}
+{{ tpl .Values.vaultProperties . | indent 4 }}
   {{- end }}

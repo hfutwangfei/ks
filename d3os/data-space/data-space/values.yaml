@@ -717,14 +717,14 @@ keystorePasswordTxt: |-
   password
 
 # keystore.jks
-keystore.jks: |-
+keystoreJks: |-
 
 # ldap-bind-password.txt
-ldap-bind-password.txt: |-
+ldapBindPasswordTxt: |-
   password
 
 # ldap-login.conf
-ldap-login.conf: |-
+ldapLoginConf: |-
   ldap {
     com.streamsets.datacollector.http.LdapLoginModule required
     debug="false"
@@ -749,7 +749,7 @@ ldap-login.conf: |-
   };
 
 # remote-realm.properties
-remote-realm.properties: |-
+remoteRealmProperties: |-
   remote.url=http://dt-co-server-test.hdt.cosmoplat.com
   login.flag=remote
   remote.user.create.interface=/center/sys-user/register
@@ -762,7 +762,7 @@ remote-realm.properties: |-
   remote.user.group.list.query.interface=/center/sys-company/checkCompany
 
 # sdc-log4j.properties
-sdc-log4j.properties: |-
+sdcLog4jProperties: |-
   # Copyright 2017 StreamSets Inc.
   #
   # Licensed under the Apache License, Version 2.0 (the "License");
@@ -815,7 +815,7 @@ sdc-log4j.properties: |-
   log4j.logger.com.datastax.driver.core.QueryLogger.SLOW=INFO
 
 # sdc-security.policy
-sdc-security.policy: |-
+sdcSecurityPolicy: |-
   // Copyright 2017 StreamSets Inc.
   //
   // Licensed under the Apache License, Version 2.0 (the "License");
@@ -880,7 +880,7 @@ sdc-security.policy: |-
   };
 
 # sdc.properties
-sdc.properties: |-
+sdcProperties: |-
   #
   # Copyright 2017 StreamSets Inc.
   #
@@ -1391,7 +1391,7 @@ sdc.properties: |-
   web.pipeline.minio.store.bucket.name=data-thread
 
 # support-bundle-redactor.json
-support-bundle-redactor.json: |-
+supportBundleRedactorJson: |-
   {
     "version": 1,
     "rules": [
@@ -1420,7 +1420,7 @@ support-bundle-redactor.json: |-
   }
 
 # vault.properties
-vault.properties: |-
+vaultProperties: |-
   #
   # Copyright 2017 StreamSets Inc.
   #
