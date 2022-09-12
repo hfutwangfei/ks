@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port | default 80 }}
+              containerPort: {{ .Values.service.port | default 9092 }}
               protocol: TCP
           # livenessProbe:
           #   httpGet:
@@ -45,6 +45,23 @@ spec:
           #   httpGet:
           #     path: /
           #     port: http
+          env:
+          {{- with .Values.kafkaBrokerId }}
+          - name: KAFKA_BROKER_ID
+            value: {{ . | quote }}
+          {{- end }}
+          {{- with .Values.kafkaZookeeperConnect }}
+          - name: KAFKA_ZOOKEEPER_CONNECT
+            value: {{ . | quote }}
+          {{- end }}
+          {{- with .Values.kafkaAdvertisedListeners }}
+          - name: KAFKA_ADVERTISED_LISTENERS
+            value: {{ . | quote }}
+          {{- end }}
+          {{- with .Values.kafkaListeners }}
+          - name: KAFKA_LISTENERS
+            value: {{ . | quote }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
