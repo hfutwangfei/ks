@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "login-center.fullname" . }}
+  labels:
+    {{- include "login-center.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "login-center.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "login-center.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "login-center.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DATASOURCE_URL
+              value: {{ .Values.env.dataResourceUrl  | quote }}
+            - name: DATASOURCE_USERNAME
+              value: {{ .Values.env.dataResourceUsername  | quote }}
+            - name: DATASOURCE_PASSWORD
+              value: {{ .Values.env.dataResourcePassword  | quote }}
+            - name: REDIS_URL
+              value: {{ .Values.env.redisUrl  | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.env.redisPort  | quote }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.env.redisPassword  | quote }}
+            - name: DEADLINE_TIME
+              value: {{ .Values.env.deadlineTime  | quote }}
+            - name: OPEN
+              value: {{ .Values.env.open  | quote }}
+            - name: TENANT_ID
+              value: {{ .Values.env.tenantId  | quote }}
+            - name: IOT_USERNAME
+              value: {{ .Values.env.iotUsername  | quote }}
+            - name: IOT_PASSWORD
+              value: {{ .Values.env.iotPassword  | quote }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port | default 80 }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
