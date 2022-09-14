@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "iotplat.fullname" . }}
+  labels:
+    {{- include "iotplat.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "iotplat.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "iotplat.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "iotplat.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: {{ .Values.global.postgresUrl | quote }}
+            - name: SPRING_DATASOURCE_USERNAME
+              value: {{ .Values.global.postgresUsername | quote }}
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: {{ .Values.global.postgresPassword | quote }}
+            - name: CACHE_TYPE
+              value: {{ .Values.global.cacheType | quote }}
+            - name: REDIS_CONNECTION_TYPE
+              value: {{ .Values.global.redisConnectionType | quote }}
+            - name: REDIS_HOST
+              value: {{ .Values.global.redisHost | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.global.redisPort | quote }}
+            - name: REDIS_NODES
+              value: {{ .Values.global.redisNodes | quote }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.global.redisPassword | quote }}
+            - name: TB_QUEUE_TYPE
+              value: {{ .Values.global.iotQueueType | quote }}
+            - name: TB_KAFKA_SERVERS
+              value: {{ .Values.global.iotKafkaServers | quote }}
+            - name: USE_UUC
+              value: {{ .Values.global.useUuc | quote }}
+            - name: UUC_AUTH_URL
+              value: {{ .Values.global.uucAuthUrl | quote }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: mqtt
+              containerPort: 1883
+              protocol: TCP
+            - name: udp
+              containerPort: 5683
+              protocol: UDP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
