@@ -1,13 +1,13 @@
 .prepare-docker-build:
 	@echo Preparing image files...
 	@mkdir -p _output/docker
-	@cp docker/* _output/docker/
+	@cp -r docker/* _output/docker/
 
 # Identify the image that will be built and deployed.
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= kubesphere
 IMAGE_NAME ?= dt-studio-frontend
-IMAGE_VERSION ?= v1.9.0
+IMAGE_VERSION ?= v0.0.3
 IMAGE ?= ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}
 
 # make docker-build: Build image into local docker daemon.
