@@ -36,7 +36,7 @@ package-login-center:
 
 # make clean: remove charts.
 clean-login-center:
-	rm -rf login-center
+	rm -rf ${IMAGE_NAME_LOGIN_CENTER}
 clean-tgz:
-	rm login-center-*.tgz
+	rm ${IMAGE_NAME_LOGIN_CENTER}*.tgz
 clean-all: clean-login-center clean-tgz

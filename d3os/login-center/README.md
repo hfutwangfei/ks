@@ -20,7 +20,7 @@ service:
   port: 8081
 ```
 
-2. `values.yaml`中定义环境变量，在`deployment.yaml`中引用。
+2. `values.yaml`中定义环境变量，在`deployment.yaml`中引用（已通过`Makefile`中命令添加），部署时添加如下的`url`。
 
 ```yaml
 env:
@@ -64,6 +64,9 @@ env:
             - name: IOT_PASSWORD
               value: {{ .Values.env.iotPassword  | quote }}
 ```
+
+> 注意：
+> > 注释掉`deployment.yaml`中探针。
 
 ## 3. 打包
 
