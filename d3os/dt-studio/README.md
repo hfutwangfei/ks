@@ -28,6 +28,7 @@
 - 另外需要初始化数据库表dt-commercialization。
 - 以下为deployment.yaml中对应的启动变量，填写实际参数值。
 
+```yaml
           env:
             - name: DATASOURCE_URL
               value: 10.206.97.170:3386/dt-commercialization
@@ -52,4 +53,9 @@
             - name: MINIO_SECRET_KEY
               value: 
             - name: DATAEASE_ADDR
+              value:
+            - name: IOT_URL
+              value:
+            - name: LOGIN_URL
               value: 
+```

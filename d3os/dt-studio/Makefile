@@ -17,6 +17,10 @@ docker-build: .prepare-docker-build
 	@echo Building image for Image Manager into local docker daemon...
 	docker build --pull -t ${IMAGE}:${IMAGE_VERSION} _output/docker
 
+# helm create
+create-chart:
+	helm create ${IMAGE_NAME}
+
 SED_REPO ?= "s/repository:\ nginx/repository:\ ${IMAGE_ADDRESS}\/${IMAGE_PROJECT}\/${IMAGE_NAME}/g"
 SED_TAG ?= "s/tag: \"\"/tag: \"${IMAGE_VERSION}\"/g"
 SED_DESC ?= "s/description: A Helm chart for Kubernetes/description: ${IMAGE_NAME}/g"
@@ -25,6 +29,10 @@ sed-chart:
 	sed -i '' ${SED_REPO} dt-studio/values.yaml
 	sed -i '' ${SED_TAG} dt-studio/values.yaml
 	sed -i '' ${SED_DESC} dt-studio/Chart.yaml
+
+# helm package
+package-chart:
+	helm package ${IMAGE_NAME}
 
 # make clean: remove _output.
 clean:
