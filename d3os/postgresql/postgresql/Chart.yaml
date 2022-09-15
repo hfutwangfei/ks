@@ -7,6 +7,8 @@ description: PostgreSQL is a powerful, open source object-relational database sy
   for reliability, feature robustness, and performance.
 
   Add env POSTGRES_DB=postgres by wangfei.
+
+  mountPath by "postgresql.fullname".
 icon: https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg
 maintainers:
 - email: kubesphere@yunify.com
@@ -14,4 +16,4 @@ maintainers:
 name: postgresql
 sources:
 - https://github.com/kubesphere/helm-charts/tree/master/src/test/postgresql
-version: 0.4.3 # modified by wangfei, original 0.4.2
+version: 0.4.7 # modified by wangfei, original 0.4.2

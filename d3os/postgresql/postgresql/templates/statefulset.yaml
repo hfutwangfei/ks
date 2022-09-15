@@ -44,7 +44,8 @@ spec:
       - name: {{ .Chart.Name }}
         volumeMounts:
         - name: data
-          mountPath: /var/lib/postgresql/data
+          # wangfei:
+          mountPath: /var/lib/{{ include "postgresql.fullname" . }}/data
           subPath: {{ .Values.persistence.subPath }}
         securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
