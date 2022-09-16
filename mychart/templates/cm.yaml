@@ -8,6 +8,12 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
+  # {{ (.Files.Glob "etc/*").AsConfig | indent 2 }}
+
+  # {{- range .Values.configOverrides }}
+  #   {{ . }}: |-
+  # {{ $.Files.Get (printf "%s%s" "etc/" .) | indent 4 }}
+  # {{- end }}
 
   application-token.txt: |-
   {{- if .Values.applicationTokenTxt }}
@@ -89,3 +95,28 @@ data:
   {{- if .Values.digestRealmProperties }}
 {{ tpl .Values.digestRealmProperties . | indent 4 }}
   {{- end }}
+
+
+  steps {
+    withCredentials([
+      kubeconfigFile(
+        credentialsId: env.KUBECONFIG_CREDENTIAL_ID,
+        variable: 'KUBECONFIG' )
+    ]) {
+      contain('maven') {
+        sh 'envsubst < service/service-user/deploy/deploy.yaml | kubectl apply -f -'
+      }
+    }
+  }
+
+  stage('Deploy to Dev') {
+  agent none
+  steps {
+input(message: '@project-admin', submitter: 'project-admin')
+                                              sh '''
+                                              kubectl apply -f deploy/no-branch-dev/devops-sample.yaml
+                                              kubectl apply -f deploy/no-branch-dev/devops-sample-svc.yaml
+                                              '''
+
+}
+}
