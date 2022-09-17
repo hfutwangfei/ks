@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "eim-plat.fullname" . }}-test-connection"
+  labels:
+    {{- include "eim-plat.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "eim-plat.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
