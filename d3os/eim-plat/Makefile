@@ -3,9 +3,9 @@ IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= kubesphere
 # eim-plat
 IMAGE_NAME ?= low-code
-IMAGE_VERSION ?= v0.0.1
+IMAGE_VERSION ?= v0.0.2
 IMAGE ?= ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}
-CHART_VERSION ?= 0.1.0
+CHART_VERSION ?= 0.2.0
 
 CHART_NAME ?= eim-plat
 
