@@ -57,5 +57,39 @@
             - name: IOT_URL
               value:
             - name: LOGIN_URL
-              value: 
+              value:
+            - name: USER_FLAG
+              value: false
+            - name: USER_EXPIRETIME
+              value: 600
+            - name: USER_EXPIREINITTIME
+              value: 3600
+```
+
+`deployment.yaml`中注意开放`websocket`端口`7999`
+
+```yaml
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: websocket
+              containerPort: 7999
+              protocol: TCP
+```
+
+`service.yaml`中注意开放`websocket`端口`7999`
+
+```yaml
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: http
+      nodePort: 32258
+    - name: websocket
+      protocol: TCP
+      port: 7999
+      targetPort: websocket
+      nodePort: 32259
 ```
