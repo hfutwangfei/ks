@@ -33,13 +33,13 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: BACKEND_SERVICE_URL
+              value: {{ .Values.env.BACKEND_SERVICE_URL }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port | default 80 }}
               protocol: TCP
-          env:
-            - name: BACKEND_SERVICE_URL
-              value: {{ .Values.env.dataResourceUrl  | quote }}
           livenessProbe:
             httpGet:
               path: /

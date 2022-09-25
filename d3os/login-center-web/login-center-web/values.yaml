@@ -80,3 +80,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+  BACKEND_SERVICE_URL: 

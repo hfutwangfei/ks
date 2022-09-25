@@ -4,11 +4,11 @@
 
 ## 1. 初始化 `helm chart`
 
-执行`make create-login-center-web`
+执行`make create-chart`
 
 ## 2. 修改镜像、版本等信息
 
-执行`make sed-chart-login-center-web`
+执行`make sed-chart`
 
 > 注意
 
@@ -39,7 +39,7 @@ env:
 ```yaml
           env:
             - name: BACKEND_SERVICE_URL
-              value: {{ .Values.env.dataResourceUrl  | quote }}
+              value: {{ .Values.env.BACKEND_SERVICE_URL  | quote }}
 ```
 
 > 注意：
@@ -47,7 +47,9 @@ env:
 
 ## 3. 打包
 
-执行`make package-login-center-web`
+执行`make package-chart`
+
+> 可以`make chart`一步打包。
 
 ## 4. 清除`chart`
 
