@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "data-analysis.fullname" . }}
+  labels:
+    {{- include "data-analysis.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "data-analysis.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "data-analysis.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "data-analysis.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: mysql_user
+              value: {{ .Values.env.mysql_user }}
+            - name: mysql_password
+              value: {{ .Values.env.mysql_password }}
+            - name: mysql_ip_port
+              value: {{ .Values.env.mysql_ip_port }}
+            - name: mysql_database
+              value: {{ .Values.env.mysql_database }}
+            - name: minio_host
+              value: {{ .Values.env.minio_host }}
+            - name: minio_bucket
+              value: {{ .Values.env.minio_bucket }}
+            - name: dt_studio_host
+              value: {{ .Values.env.dt_studio_host }}
+            - name: share_address_url
+              value: {{ .Values.env.share_address_url }}
+            - name: redis_host
+              value: {{ .Values.env.redis_host }}
+            - name: redis_port
+              value: {{ .Values.env.redis_port }}
+            - name: redis_password
+              value: {{ .Values.env.redis_password }}
+            - name: redis_database
+              value: {{ .Values.env.redis_database }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port | default 80 }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
