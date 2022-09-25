@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "iot-plat.fullname" . }}
+  labels:
+    {{- include "iot-plat.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "iot-plat.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "iot-plat.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "iot-plat.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      # wangfei:
+      hostAliases:
+        - ip: {{ .Values.hostAliases.ip | quote }}
+          hostnames:
+            - {{ .Values.hostAliases.hostnames | quote }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          # wangfei:
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: {{ .Values.env.postgresUrl | quote }}
+            - name: SPRING_DATASOURCE_USERNAME
+              value: {{ .Values.env.postgresUsername | quote }}
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: {{ .Values.env.postgresPassword | quote }}
+            - name: CACHE_TYPE
+              value: {{ .Values.env.cacheType | quote }}
+            - name: REDIS_CONNECTION_TYPE
+              value: {{ .Values.env.redisConnectionType | quote }}
+            - name: REDIS_HOST
+              value: {{ .Values.env.redisHost | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.env.redisPort | quote }}
+            - name: REDIS_NODES
+              value: {{ .Values.env.redisNodes | quote }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.env.redisPassword | quote }}
+            - name: TB_QUEUE_TYPE
+              value: {{ .Values.env.iotQueueType | quote }}
+            - name: TB_KAFKA_SERVERS
+              value: {{ .Values.env.iotKafkaServers | quote }}
+            - name: USE_UUC
+              value: {{ .Values.env.useUuc | quote }}
+            - name: UUC_AUTH_URL
+              value: {{ .Values.env.uucAuthUrl | quote }}
+          # wangfei:
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: mqtt
+              containerPort: 1883
+              protocol: TCP
+            - name: udp
+              containerPort: 5683
+              protocol: UDP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
