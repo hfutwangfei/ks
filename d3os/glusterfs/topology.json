@@ -1,0 +1,72 @@
+{
+  "clusters": [
+    {
+      "nodes": [
+        {
+          "node": {
+            "hostnames": {
+              "manage": [
+                "test-master"
+              ],
+              "storage": [
+                "10.206.73.136"
+              ]
+            },
+            "zone": 1
+          },
+          "devices": [
+            "/dev/loop0"
+          ]
+        },
+        {
+          "node": {
+            "hostnames": {
+              "manage": [
+                "test-node1"
+              ],
+              "storage": [
+                "10.206.73.137"
+              ]
+            },
+            "zone": 1
+          },
+          "devices": [
+            "/dev/loop0"
+          ]
+        },
+        {
+          "node": {
+            "hostnames": {
+              "manage": [
+                "test-node2"
+              ],
+              "storage": [
+                "10.206.73.138"
+              ]
+            },
+            "zone": 1
+          },
+          "devices": [
+            "/dev/loop0"
+          ]
+        },
+        {
+          "node": {
+            "hostnames": {
+              "manage": [
+                "test-node3"
+              ],
+              "storage": [
+                "10.206.73.143"
+              ]
+            },
+            "zone": 1
+          },
+          "devices": [
+            "/dev/loop0"
+          ]
+        }
+      ]
+    }
+  ]
+}
