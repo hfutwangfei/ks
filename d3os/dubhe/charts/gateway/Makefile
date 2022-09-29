@@ -1,7 +1,7 @@
 # Identify the image that will be built and deployed.
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= haier-dubhe
-IMAGE_NAME ?= dubhe-gateway
+IMAGE_NAME ?= gateway
 IMAGE_VERSION ?= v1.0
 
 CHART_VERSION ?= 0.1.0
@@ -13,7 +13,7 @@ create-chart:
 
 SED_REPO ?= "s/repository:\ nginx/repository:\ ${IMAGE_ADDRESS}\/${IMAGE_PROJECT}\/${IMAGE_NAME}/g"
 SED_TAG ?= "s/tag: \"\"/tag: \"${IMAGE_VERSION}\"/g"
-PORT ?= 8069
+PORT ?= 8800
 SED_PORT ?= "s/port: 80/port: ${PORT}/g"
 SED_DESC ?= "s/description: A Helm chart for Kubernetes/description: ${CHART_NAME}/g"
 SED_CHART_VERSION ?= "s/version: 0.1.0/version: ${CHART_VERSION}/g"
