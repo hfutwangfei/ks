@@ -136,7 +136,7 @@ func main() {
 		genMakefile(projectDir)
 	}
 
-	log.Printf("names: %+v", len(names))
+	//log.Printf("names: %+v", len(names))
 	// log.Printf("names: %+v", names)
 
 }
@@ -148,7 +148,7 @@ func helmCreate(p string) {
 		log.Printf("failed to exec.Command %s err: %v", cmd.String(), err)
 		return
 	}
-	log.Println("exec.Command helm create")
+	//log.Println("exec.Command helm create")
 }
 
 // sed -i ''  's/!/./g' test.txt
@@ -161,10 +161,10 @@ func sed(p, desc string) (commands []string) {
 			`'s/repository:\ nginx/repository:\ registry-edge.cosmoplat.com\/nginx\/nginx/g'`,
 			p+"/values.yaml")
 		cmdStr := cmd.String()
-		log.Printf("cmd: %s", cmdStr)
+		//log.Printf("cmd: %s", cmdStr)
 		commands = append(commands, cmdStr)
 		if err := cmd.Run(); err != nil {
-			log.Printf("failed to sed err: %v", err)
+			//log.Printf("failed to sed err: %v", err)
 			// return
 		} else {
 			log.Println("exec.Command sed")
@@ -179,10 +179,10 @@ func sed(p, desc string) (commands []string) {
 			`'s/tag: ""/tag: "v0.1.1"/g'`,
 			p+"/values.yaml")
 		cmdStr := cmd.String()
-		log.Printf("cmd: %s", cmdStr)
+		//log.Printf("cmd: %s", cmdStr)
 		commands = append(commands, cmdStr)
 		if err := cmd.Run(); err != nil {
-			log.Printf("failed to sed err: %v", err)
+			//log.Printf("failed to sed err: %v", err)
 			// return
 		} else {
 			log.Println("exec.Command sed")
@@ -196,10 +196,10 @@ func sed(p, desc string) (commands []string) {
 			`'s/description: A Helm chart for Kubernetes/description: `+desc+`/g'`,
 			p+"/Chart.yaml")
 		cmdStr := cmd.String()
-		log.Printf("cmd: %s", cmdStr)
+		//log.Printf("cmd: %s", cmdStr)
 		commands = append(commands, cmdStr)
 		if err := cmd.Run(); err != nil {
-			log.Printf("failed to sed err: %v", err)
+			//log.Printf("failed to sed err: %v", err)
 			// return
 		} else {
 			log.Println("exec.Command sed")
@@ -221,6 +221,8 @@ func genMakefile(dir string) {
 	w.WriteString("sed:\n")
 	for _, cmd := range cmds {
 		w.WriteString("\t")
+		cmd = strings.TrimPrefix(cmd, "/usr/bin/")
+		cmd = "@" + cmd
 		if _, err := w.WriteString(cmd); err != nil {
 			log.Printf("failed to write string cmd: %s err: %v", cmd, err)
 		}
@@ -238,5 +240,5 @@ func helmPackage(p string) {
 		log.Printf("failed to exec.Command %s err: %v", cmd.String(), err)
 		return
 	}
-	log.Printf("exec.Command helm package %s", cmd.String())
+	//log.Printf("exec.Command helm package %s", cmd.String())
 }
