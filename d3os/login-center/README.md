@@ -24,12 +24,12 @@ service:
 
 ```yaml
 env:
-  dataResourceUrl: '10.233.70.47:3306'
+  dataResourceUrl: 10.206.114.8:3306
   dataResourceUsername: root
   dataResourcePassword: FviqAJDYbu
-  redisUrl: 10.233.109.35
+  redisUrl: 10.233.105.181
   redisPort: 6379
-  redisPassword: ''
+  redisPassword:
   deadlineTime: 6
   open: true
   tenantId: 53837240-3025-11ed-a60b-5f28a72be0bf
