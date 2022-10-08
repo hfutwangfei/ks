@@ -2,9 +2,9 @@
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= haier-dubhe
 IMAGE_NAME ?= dubhe-k8s
-IMAGE_VERSION ?= v1.0
+IMAGE_VERSION ?= v2.0
 
-CHART_VERSION ?= 0.1.0
+CHART_VERSION ?= 0.2.0
 CHART_NAME ?= k8s
 
 # helm create

@@ -59,6 +59,7 @@ package-chart:
 	cd train && make package-chart
 
 chart: create-chart sed-chart package-chart
+	@mkdir tgz && cp */*.tgz tgz/
 
 clean-all:
 	cd admin && make clean-all
@@ -79,3 +80,4 @@ clean-all:
 	cd tadl && make clean-all
 	cd terminal && make clean-all
 	cd train && make clean-all
+	rm -rf tgz
