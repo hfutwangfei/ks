@@ -8,7 +8,7 @@ image:
   repository: registry-edge.cosmoplat.com/haier-dubhe/dubhe-auth
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v3.0"
+  tag: "v2.0"
 
 imagePullSecrets: []
 nameOverride: ""

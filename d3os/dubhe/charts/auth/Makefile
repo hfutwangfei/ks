@@ -2,9 +2,9 @@
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= haier-dubhe
 IMAGE_NAME ?= dubhe-auth
-IMAGE_VERSION ?= v3.0
+IMAGE_VERSION ?= v2.0
 
-CHART_VERSION ?= 0.3.1
+CHART_VERSION ?= 0.2.1
 CHART_NAME ?= auth
 
 # helm create
