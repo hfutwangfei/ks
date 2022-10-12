@@ -64,3 +64,23 @@ nginx  nginx-0.1.0.tgz
 > > 参考:
 > > [Odoo Docker安装&部署](https://zhuanlan.zhihu.com/p/377799674)
 > > [odoo环境变量配置](https://github.com/jeffery9/kubernetes-odoo/blob/master/odoo.yaml)
+
+> 关于删除探针`probe`可参考``，如下
+
+```makefile
+# remove probes in deployment.yaml
+SED_DELETE_PROBE :=
+LIVENESS_PROBE ?= livenessProbe:
+SED_DELETE_PROBE := /${LIVENESS_PROBE}/d
+READINESS_PROBE ?= readinessProbe:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${READINESS_PROBE}/d
+PROBE_HTTP_GET ?= httpGet:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_HTTP_GET}/d
+PROBE_PATH ?= path:\ \/
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PATH}/d
+PROBE_PORT ?= port:\ http
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PORT}/d
+
+sed-chart:
+    sed -i '' "${SED_DELETE_PROBE}" ${CHART_NAME}/templates/deployment.yaml
+```
