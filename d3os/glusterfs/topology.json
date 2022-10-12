@@ -6,10 +6,10 @@
           "node": {
             "hostnames": {
               "manage": [
-                "test-master"
+                "tcosmo-sh01"
               ],
               "storage": [
-                "10.206.73.136"
+                "10.206.68.1"
               ]
             },
             "zone": 1
@@ -22,10 +22,10 @@
           "node": {
             "hostnames": {
               "manage": [
-                "test-node1"
+                "tcosmo-sh05"
               ],
               "storage": [
-                "10.206.73.137"
+                "10.206.68.5"
               ]
             },
             "zone": 1
@@ -38,26 +38,10 @@
           "node": {
             "hostnames": {
               "manage": [
-                "test-node2"
+                "tcosmo-sh06"
               ],
               "storage": [
-                "10.206.73.138"
-              ]
-            },
-            "zone": 1
-          },
-          "devices": [
-            "/dev/loop0"
-          ]
-        },
-        {
-          "node": {
-            "hostnames": {
-              "manage": [
-                "test-node3"
-              ],
-              "storage": [
-                "10.206.73.143"
+                "10.206.68.6"
               ]
             },
             "zone": 1
