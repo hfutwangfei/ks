@@ -61,23 +61,45 @@ package-chart:
 chart: create-chart sed-chart package-chart
 	@mkdir tgz && cp */*.tgz tgz/
 
-clean-all:
-	cd admin && make clean-all
-	cd algorithm && make clean-all
-	cd auth && make clean-all
-	cd data && make clean-all
-	cd data-dcm && make clean-all
-	cd data-task && make clean-all
-	cd gateway && make clean-all
-	cd image && make clean-all
-	cd k8s && make clean-all
-	cd measure && make clean-all
-	cd model && make clean-all
-	cd notebook && make clean-all
-	cd optimize && make clean-all
-	cd serving && make clean-all
-	cd serving-gateway && make clean-all
-	cd tadl && make clean-all
-	cd terminal && make clean-all
-	cd train && make clean-all
+clean-chart:
+	cd admin && make clean-chart
+	cd algorithm && make clean-chart
+	cd auth && make clean-chart
+	cd data && make clean-chart
+	cd data-dcm && make clean-chart
+	cd data-task && make clean-chart
+	cd gateway && make clean-chart
+	cd image && make clean-chart
+	cd k8s && make clean-chart
+	cd measure && make clean-chart
+	cd model && make clean-chart
+	cd notebook && make clean-chart
+	cd optimize && make clean-chart
+	cd serving && make clean-chart
+	cd serving-gateway && make clean-chart
+	cd tadl && make clean-chart
+	cd terminal && make clean-chart
+	cd train && make clean-chart
+
+clean-tgz:
+	cd admin && make clean-tgz
+	cd algorithm && make clean-tgz
+	cd auth && make clean-tgz
+	cd data && make clean-tgz
+	cd data-dcm && make clean-tgz
+	cd data-task && make clean-tgz
+	cd gateway && make clean-tgz
+	cd image && make clean-tgz
+	cd k8s && make clean-tgz
+	cd measure && make clean-tgz
+	cd model && make clean-tgz
+	cd notebook && make clean-tgz
+	cd optimize && make clean-tgz
+	cd serving && make clean-tgz
+	cd serving-gateway && make clean-tgz
+	cd tadl && make clean-tgz
+	cd terminal && make clean-tgz
+	cd train && make clean-tgz
 	rm -rf tgz
+
+clean-all: clean-chart clean-tgz
