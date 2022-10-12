@@ -38,6 +38,26 @@ sed-chart:
 	cd terminal && make sed-chart
 	cd train && make sed-chart
 
+add-volume:
+	cd admin && make add-volume
+	cd algorithm && make add-volume
+	cd auth && make add-volume
+	cd data && make add-volume
+	cd data-dcm && make add-volume
+	cd data-task && make add-volume
+	cd gateway && make add-volume
+	cd image && make add-volume
+	cd k8s && make add-volume
+	cd measure && make add-volume
+	cd model && make add-volume
+	cd notebook && make add-volume
+	cd optimize && make add-volume
+	cd serving && make add-volume
+	cd serving-gateway && make add-volume
+	cd tadl && make add-volume
+	cd terminal && make add-volume
+	cd train && make add-volume
+
 package-chart:
 	cd admin && make package-chart
 	cd algorithm && make package-chart
@@ -58,8 +78,8 @@ package-chart:
 	cd terminal && make package-chart
 	cd train && make package-chart
 
-chart: create-chart sed-chart package-chart
-	@mkdir tgz && cp */*.tgz tgz/
+chart: create-chart sed-chart add-volume package-chart
+	@mkdir tgz && mv */*.tgz tgz/
 
 clean-chart:
 	cd admin && make clean-chart

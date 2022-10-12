@@ -80,3 +80,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# volume
+volumes:
+  - name: nfs
+    hostPath:
+      path: /nfs-uat
+volumeMounts:
+  - name: nfs
+    mountPath: /nfs-uat
