@@ -32,12 +32,17 @@ spec:
       - name: configs
         configMap:
           name: {{ template "mychart.fullname" . }}
+      - name: dist
+        hostPath:
+          path: /root/KubeSphere/dubhe-nginx
       containers:
         - name: {{ .Chart.Name }}
           # wangfei: volume
           volumeMounts:
           - name: configs
             mountPath: /usr/dataspace/etc
+          - name: dist
+            mountPath: /etc/nginx
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

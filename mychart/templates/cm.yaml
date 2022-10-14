@@ -8,7 +8,13 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-  # {{ (.Files.Glob "etc/*").AsConfig | indent 2 }}
+  {{- $files := .Files }}
+  {{- range tuple "config1.toml" "config2.toml" "config3.toml" }}
+  {{ . }}: |-
+    {{ $files.Get . }}
+  {{- end }}
+
+  {{ (.Files.Glob "etc/*").AsConfig | indent 2 }}
 
   # {{- range .Values.configOverrides }}
   #   {{ . }}: |-
@@ -19,104 +25,3 @@ data:
   {{- if .Values.applicationTokenTxt }}
 {{ tpl .Values.applicationTokenTxt . | indent 4 }}
   {{- end }}
-  basic-realm.properties: |-
-  {{- if .Values.basicRealmProperties }}
-{{ tpl .Values.basicRealmProperties . | indent 4 }}
-  {{- end }}
-  credential-stores.properties: |-
-  {{- if .Values.credentialStoresProperties }}
-{{ tpl .Values.credentialStoresProperties . | indent 4 }}
-  {{- end }}
-  database-realm.properties: |-
-  {{- if .Values.databaseRealmProperties }}
-{{ tpl .Values.databaseRealmProperties . | indent 4 }}
-  {{- end }}
-  digest-realm.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  dpm-url.txt: |-
-  {{- if .Values.dpmUrlTxt }}
-{{ tpl .Values.dpmUrlTxt . | indent 4 }}
-  {{- end }}
-  dpm.properties: |-
-  {{- if .Values.dpmProperties }}
-{{ tpl .Values.dpmProperties . | indent 4 }}
-  {{- end }}
-  email-password.txt: |-
-  {{- if .Values.emailPasswordTxt }}
-{{ tpl .Values.emailPasswordTxt . | indent 4 }}
-  {{- end }}
-  form-realm.properties: |-
-  {{- if .Values.formRealmProperties }}
-{{ tpl .Values.formRealmProperties . | indent 4 }}
-  {{- end }}
-  jdbc.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  keystore-password.txt: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  keystore.jks: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  ldap-bind-password.txt: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  ldap-login.conf: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  remote-realm.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  sdc-log4j.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  sdc-security.policy: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  sdc.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  support-bundle-redactor.json: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-  vault.properties: |-
-  {{- if .Values.digestRealmProperties }}
-{{ tpl .Values.digestRealmProperties . | indent 4 }}
-  {{- end }}
-
-
-  steps {
-    withCredentials([
-      kubeconfigFile(
-        credentialsId: env.KUBECONFIG_CREDENTIAL_ID,
-        variable: 'KUBECONFIG' )
-    ]) {
-      contain('maven') {
-        sh 'envsubst < service/service-user/deploy/deploy.yaml | kubectl apply -f -'
-      }
-    }
-  }
-
-  stage('Deploy to Dev') {
-  agent none
-  steps {
-input(message: '@project-admin', submitter: 'project-admin')
-                                              sh '''
-                                              kubectl apply -f deploy/no-branch-dev/devops-sample.yaml
-                                              kubectl apply -f deploy/no-branch-dev/devops-sample-svc.yaml
-                                              '''
-
-}
-}
