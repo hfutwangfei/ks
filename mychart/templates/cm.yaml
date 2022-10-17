@@ -14,7 +14,8 @@ data:
     {{ $files.Get . }}
   {{- end }}
 
-  {{ (.Files.Glob "etc/*").AsConfig | indent 2 }}
+{{ (.Files.Glob "etc/*").AsConfig | indent 2 }}
+{{ (.Files.Glob "etc/etc/*").AsConfig | indent 2 }}
 
   # {{- range .Values.configOverrides }}
   #   {{ . }}: |-
