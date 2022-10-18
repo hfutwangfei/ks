@@ -1,10 +1,80 @@
 ## bug
 
+### 虚拟磁盘创建法则
+
+```shell
+mkdir -p /mnt/sdb/vdisk
+mkdir -p /mnt/vloop
+dd if=/dev/zero of=raw.img bs=1G count=50
+mkfs.xfs -q raw.img
+mount -o loop /mnt/sdb/vdisk/raw.img /mnt/vloop
+```
+
+会报错误
+
+```shell
+Unable to add device: Initializing device /dev/sdb failed (already initialized or contains data?)
+```
+
+这时先
+
+```shell
+umount /dev/loop0
+losetup /dev/loop0 raw.img
+```
+
+如果是缺少命令的话 在 lvm2 包里。
+然后执行
+```shell
+parted /dev/loop0
+pvcreate /dev/loop0
+```
+
+### glusterfs-daemonset.yaml
+
+缺少下面字段，必须加上
+
+```shell
+spec:
+  # 需添加该字段
+  selector:
+    matchLabels:
+      glusterfs-node: pod
+```
+
 ### storageclass-gluster-heketi.yaml
 
 参考[https://blog.csdn.net/qq_15138049/article/details/122450353](https://blog.csdn.net/qq_15138049/article/details/122450353)
 
-1. 添加`Secret`
+1. 添加`Secret`, `StorageClass`中`parameters`: `restauthenabled`, `volumetype`等。这样`pvc`状态才`Bound`, 否则一直`Pending`.
+
+```shell
+---
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/glusterfs
+metadata:
+  name: heketi-secret
+  #namespace: kube-system
+data:
+  # base64 encoded. key=My Secret
+  key: TXkgU2VjcmV0
+
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: gluster-heketi
+provisioner: kubernetes.io/glusterfs
+parameters:
+  resturl: "http://10.233.22.219:8080"
+  restauthenabled: "true"
+  volumetype: "none"
+  restuser: "admin"
+  secretName: "heketi-secret"
+  secretNamespace: "default"
+  clusterid: "cfb5c3eb1d34ae61668eb3da475d23d0"
+```
 
 2. 所有节点!!!
 
@@ -18,7 +88,8 @@ modprobe dm_thin_pool
 
 1. 进入`heketi`的`pod`内
 ```shell
-kubectl exec -it heketi-868879cf95-zc445 -- /bin/sh
+[root@tcosmo-sh05 ~]# kubectl exec -it heketi-868879cf95-zc445 -- /bin/sh
+sh-5.1# export HEKETI_CLI_SERVER=http://localhost:8080
 ```
 
 2. 查看heketi的topology info
