@@ -90,13 +90,13 @@ ADD_DEPLOYMENT_VOLUME_MOUNTS ?= s/${ADD_DEPLOYMENT_VOLUME_MOUNTS_BEFORE}/${ADD_D
 # add values.yaml `volumes` and `volumeMounts`
 
 # volume
-volumes:
-  - name: nfs
-    hostPath:
-      path: /nfs-uat
-volumeMounts:
-  - name: nfs
-    mountPath: /nfs-uat
+#volumes:
+#  - name: nfs
+#    hostPath:
+#      path: /nfs-uat
+#volumeMounts:
+#  - name: nfs
+#    mountPath: /nfs-uat
 
 ADD_VALUES_VOLUME := ''
 ADD_VALUES_VOLUME := ${ADD_VALUES_VOLUME}\\n

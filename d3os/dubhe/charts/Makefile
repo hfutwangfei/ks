@@ -78,8 +78,11 @@ package-chart:
 	cd terminal && make package-chart
 	cd train && make package-chart
 
+TGZ_DIR ?= _chart-tgz
+
 chart: create-chart sed-chart add-volume package-chart
-	@mkdir tgz && mv */*.tgz tgz/
+	@cd .. && rm -rf ${TGZ_DIR} && mkdir ${TGZ_DIR}
+	@mv */*.tgz ../${TGZ_DIR}/
 
 clean-chart:
 	cd admin && make clean-chart
@@ -120,6 +123,6 @@ clean-tgz:
 	cd tadl && make clean-tgz
 	cd terminal && make clean-tgz
 	cd train && make clean-tgz
-	rm -rf tgz
+	rm -rf ${TGZ_DIR}
 
 clean-all: clean-chart clean-tgz
