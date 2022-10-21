@@ -87,3 +87,14 @@ systemctl stop etcd
 ```shell
 systemctl start etcd
 ```
+
+> 备份示例效果：
+> > 1.创建企业空间test、项目空间test-1
+> 
+> > 2.备份数据
+> 
+> > 3.在企业空间test、项目空间test-1下创建应用nginx-ovqrj8
+> 
+> > 4.恢复备份数据
+> 
+> > 5.etcd中有nginx-ovqrj8相关的数据，但查不到相关k8s资源信息，页面查看service, deployment, pod都不存在
