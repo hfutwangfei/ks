@@ -72,8 +72,15 @@ etcdctl --cacert=/etc/ssl/etcd/ssl/ca.pem --key=/etc/ssl/etcd/ssl/node-master-ke
 ```
 
 ### 导入命令：导入备份数据（需要先删除/Users/wangfei/default.etcd下的数据）
+
+本地：
 ```shell
 etcdutl snapshot restore etcd-snapshot-20220921141816.db --data-dir=/Users/wangfei/default.etcd
+```
+
+10.206.73.136:
+```shell
+etcdutl snapshot restore etcd-snapshot-20220921141816.db --data-dir=/var/lib/etcd --cacert=/etc/ssl/etcd/ssl/ca.pem --key=/etc/ssl/etcd/ssl/node-test-master-key.pem --cert=/etc/ssl/etcd/ssl/node-test-master.pem
 ```
 
 其中参数`data-dir`是上述etcd环境变量`env`中的`ETCD_DATA_DIR=/var/lib/etcd`
@@ -98,3 +105,19 @@ systemctl start etcd
 > > 4.恢复备份数据
 > 
 > > 5.etcd中有nginx-ovqrj8相关的数据，但查不到相关k8s资源信息，页面查看service, deployment, pod都不存在
+
+上面步骤5，查看docker容器：
+```shell
+[root@test-node1 ~]# docker ps -a | grep nginx-ovqrj8
+27b4154d0bf8   684dbf9f01f3                                                 "/docker-entrypoint.…"   4 seconds ago        Up 3 seconds                                                                                                           k8s_nginx_nginx-ovqrj8-f9c7dd4cc-w48sn_test-1_cae46102-a782-46eb-a1c3-6289413460b9_22
+4606234f9484   684dbf9f01f3                                                 "/docker-entrypoint.…"   5 minutes ago        Exited (0) 5 minutes ago                                                                                               k8s_nginx_nginx-ovqrj8-f9c7dd4cc-w48sn_test-1_cae46102-a782-46eb-a1c3-6289413460b9_21
+c49f5cee621d   kubesphere/pause:3.2                                         "/pause"                 About an hour ago    Up About an hour                                                                                                       k8s_POD_nginx-ovqrj8-f9c7dd4cc-w48sn_test-1_cae46102-a782-46eb-a1c3-6289413460b9_0
+[root@test-node1 ~]#
+```
+
+参考：
+第5章 核心组件的运行机制
+
+---
+
+上述步骤4恢复备份前，对步骤3应用所在节点systemctl stop kubelet
