@@ -84,3 +84,39 @@ SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PORT}/d
 sed-chart:
     sed -i '' "${SED_DELETE_PROBE}" ${CHART_NAME}/templates/deployment.yaml
 ```
+
+## 关于`pod`时区UTC问题
+
+`pod`内的时区是UTC，有以下两个方法修改时区
+
+1. 添加环境变量`TZ`
+
+```yaml
+...
+spec:
+  containers:
+  - name: ngx-time
+    image: nginx:latest
+    env:
+      - name: TZ
+        value: Asia/Shanghai
+...
+```
+
+2. 挂载服务器本地`/etc/localtime`
+
+```yaml
+...
+volumes:
+  - hostPath:
+      path: /etc/localtime
+      type: ""
+    name: localtime
+containers:
+  - images: XXX
+...
+    volumeMounts:
+     - mountPath: /etc/localtime
+       name: localtime
+...
+```
