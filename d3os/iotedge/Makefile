@@ -4,10 +4,10 @@ IMAGE_DIR ?= _output
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= kubesphere
 IMAGE_NAME ?= iotedge
-IMAGE_VERSION ?= v0.0.2
+IMAGE_VERSION ?= v0.0.3
 IMAGE ?= ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}
 
-CHART_VERSION ?= 0.0.2
+CHART_VERSION ?= 0.0.3
 CHART_NAME ?= iotedge
 
 # helm create
