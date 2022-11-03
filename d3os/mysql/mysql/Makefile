@@ -21,6 +21,9 @@ docker-build: .prepare
 docker-push:
 	docker push ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}:${IMAGE_VERSION}
 
+docker-run:
+	@docker run --name ${IMAGE_NAME} -d -p 13306:3306 ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}:${IMAGE_VERSION}
+
 create-chart:
 	helm create ${CHART_NAME}
 
