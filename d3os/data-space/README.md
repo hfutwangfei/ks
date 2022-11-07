@@ -29,6 +29,8 @@
 
 ### configmap：配置
 
+> keystore.jks: configmap 无法解析
+
 #### database-realm.properties
 
 ```yaml
