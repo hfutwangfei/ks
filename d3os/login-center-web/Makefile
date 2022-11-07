@@ -19,12 +19,25 @@ SED_TAG_LOGIN_CENTER_WEB ?= "s/tag: \"\"/tag: \"${IMAGE_VERSION_LOGIN_CENTER_WEB
 SED_DESC_LOGIN_CENTER_WEB ?= "s/description: A Helm chart for Kubernetes/description: ${CHART_NAME}/g"
 CONTAINER_PORT_LOGIN_CENTER_WEB ?= {{ .Values.service.port | default 80 }}
 SED_CONTAINER_PORT_LOGIN_CENTER_WEB ?= "s/containerPort: 80/containerPort: ${CONTAINER_PORT_LOGIN_CENTER_WEB}/g"
+# remove probes in deployment.yaml
+SED_DELETE_PROBE :=
+LIVENESS_PROBE ?= livenessProbe:
+SED_DELETE_PROBE := /${LIVENESS_PROBE}/d
+READINESS_PROBE ?= readinessProbe:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${READINESS_PROBE}/d
+PROBE_HTTP_GET ?= httpGet:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_HTTP_GET}/d
+PROBE_PATH ?= path:\ \/
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PATH}/d
+PROBE_PORT ?= port:\ http
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PORT}/d
 
 sed-chart:
 	sed -i '' ${SED_REPO_LOGIN_CENTER_WEB} ${CHART_NAME}/values.yaml
 	sed -i '' ${SED_TAG_LOGIN_CENTER_WEB} ${CHART_NAME}/values.yaml
 	sed -i '' ${SED_DESC_LOGIN_CENTER_WEB} ${CHART_NAME}/Chart.yaml
 	sed -i '' ${SED_CONTAINER_PORT_LOGIN_CENTER_WEB} ${CHART_NAME}/templates/deployment.yaml
+	sed -i '' "${SED_DELETE_PROBE}" ${CHART_NAME}/templates/deployment.yaml
 
 # add env
 ADD_DEPLOYMENT_ENV_BEFORE ?= imagePullPolicy:\ {{\ .Values.image.pullPolicy\ }}
