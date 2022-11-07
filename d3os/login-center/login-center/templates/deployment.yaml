@@ -35,39 +35,31 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: DATASOURCE_URL
-              value: {{ .Values.env.dataResourceUrl  | quote }}
+              value: {{ .Values.env.dataResourceUrl | quote }}
             - name: DATASOURCE_USERNAME
-              value: {{ .Values.env.dataResourceUsername  | quote }}
+              value: {{ .Values.env.dataResourceUsername | quote }}
             - name: DATASOURCE_PASSWORD
-              value: {{ .Values.env.dataResourcePassword  | quote }}
+              value: {{ .Values.env.dataResourcePassword | quote }}
             - name: REDIS_URL
-              value: {{ .Values.env.redisUrl  | quote }}
+              value: {{ .Values.env.redisUrl | quote }}
             - name: REDIS_PORT
-              value: {{ .Values.env.redisPort  | quote }}
+              value: {{ .Values.env.redisPort | quote }}
             - name: REDIS_PASSWORD
-              value: {{ .Values.env.redisPassword  | quote }}
+              value: {{ .Values.env.redisPassword | quote }}
             - name: DEADLINE_TIME
-              value: {{ .Values.env.deadlineTime  | quote }}
+              value: {{ .Values.env.deadlineTime | quote }}
             - name: OPEN
-              value: {{ .Values.env.open  | quote }}
+              value: {{ .Values.env.open | quote }}
             - name: TENANT_ID
-              value: {{ .Values.env.tenantId  | quote }}
+              value: {{ .Values.env.tenantId | quote }}
             - name: IOT_USERNAME
-              value: {{ .Values.env.iotUsername  | quote }}
+              value: {{ .Values.env.iotUsername | quote }}
             - name: IOT_PASSWORD
-              value: {{ .Values.env.iotPassword  | quote }}
+              value: {{ .Values.env.iotPassword | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port | default 80 }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
