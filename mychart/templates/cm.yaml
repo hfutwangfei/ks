@@ -22,7 +22,7 @@ data:
   # {{ $.Files.Get (printf "%s%s" "etc/" .) | indent 4 }}
   # {{- end }}
 
-  application-token.txt: |-
-  {{- if .Values.applicationTokenTxt }}
-{{ tpl .Values.applicationTokenTxt . | indent 4 }}
-  {{- end }}
+#  application-token.txt: |-
+#  {{- if .Values.applicationTokenTxt }}
+#{{ tpl .Values.applicationTokenTxt . | indent 4 }}
+#  {{- end }}
