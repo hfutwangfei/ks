@@ -9,10 +9,10 @@ IMAGE_DIR ?= _output
 IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= kubesphere
 IMAGE_NAME ?= data-analysis
-IMAGE_VERSION ?= v1.9.0
+IMAGE_VERSION ?= 20220929
 IMAGE ?= ${IMAGE_ADDRESS}/${IMAGE_PROJECT}/${IMAGE_NAME}
 
-CHART_VERSION ?= 0.2.0
+CHART_VERSION ?= 0.3.0
 CHART_NAME ?= data-analysis
 
 # make docker-build: Build image into local docker daemon.
@@ -32,6 +32,18 @@ SED_DESC ?= "s/description: A Helm chart for Kubernetes/description: ${CHART_NAM
 SED_CHART_VERSION ?= "s/version: 0.1.0/version: ${CHART_VERSION}/g"
 CONTAINER_PORT ?= {{ .Values.service.port | default 80 }}
 SED_CONTAINER_PORT ?= "s/containerPort: 80/containerPort: ${CONTAINER_PORT}/g"
+# remove probes in deployment.yaml
+SED_DELETE_PROBE :=
+LIVENESS_PROBE ?= livenessProbe:
+SED_DELETE_PROBE := /${LIVENESS_PROBE}/d
+READINESS_PROBE ?= readinessProbe:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${READINESS_PROBE}/d
+PROBE_HTTP_GET ?= httpGet:
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_HTTP_GET}/d
+PROBE_PATH ?= path:\ \/
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PATH}/d
+PROBE_PORT ?= port:\ http
+SED_DELETE_PROBE := ${SED_DELETE_PROBE};/${PROBE_PORT}/d
 # make sed-chart: modify chart information.
 sed-chart:
 	sed -i '' ${SED_REPO} ${CHART_NAME}/values.yaml
@@ -40,6 +52,7 @@ sed-chart:
 	sed -i '' ${SED_DESC} ${CHART_NAME}/Chart.yaml
 	sed -i '' ${SED_CHART_VERSION} ${CHART_NAME}/Chart.yaml
 	sed -i '' ${SED_CONTAINER_PORT} ${CHART_NAME}/templates/deployment.yaml
+	sed -i '' "${SED_DELETE_PROBE}" ${CHART_NAME}/templates/deployment.yaml
 
 # add env
 ADD_DEPLOYMENT_ENV_BEFORE ?= imagePullPolicy:\ {{\ .Values.image.pullPolicy\ }}
