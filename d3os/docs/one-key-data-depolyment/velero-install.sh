@@ -1,0 +1,11 @@
+velero install \
+--image velero/velero:v1.9.2 \
+--provider alibabacloud \
+--bucket k8s-data-backup \
+--namespace velero \
+--secret-file ./credentials-velero \
+--use-volume-snapshots=false \
+--use-restic \
+--backup-location-config region=cn-beijing,network=internal \
+--plugins reg.example.com/infra/velero-plugin-alibabacloud:v1.0.0-2d33b89 \
+--prefix dev-backup

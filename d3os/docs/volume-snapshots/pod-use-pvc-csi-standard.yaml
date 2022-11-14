@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-use-pvc-csi-standard
+spec:
+  containers:
+    - name: pod-use-pvc-csi-standard
+      image: busybox
+      command:
+        - sleep
+        - "3600"
+      volumeMounts:
+        - name: csi-standard-volume
+          mountPath: "/pv-data"
+          readOnly: false
+  volumes:
+    - name: csi-standard-volume
+      persistentVolumeClaim:
+        claimName: pvc-csi-standard
