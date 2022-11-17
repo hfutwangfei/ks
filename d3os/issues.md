@@ -24,3 +24,13 @@ kubectl delete pod coredns-5bb9675886-sq66r -n kube-system
 ```shell
 kubectl delete pod ks-apiserver-**** -n kubesphere-system
 ```
+
+## 2. 服务部署过程报错及解决方案
+
+### 2.1 部署redis
+
+```
+running PreBind plugin "VolumeBinding": binding volumes: timed out waiting for the condition
+```
+
+
