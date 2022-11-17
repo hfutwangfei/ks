@@ -1,7 +1,7 @@
 image:
   postgres:
     repository: registry-edge.cosmoplat.com/kubesphere/cdcpgsqliotplat
-    tag: v0.0.2
+    tag: v0.0.4
     pullPolicy: IfNotPresent
 
 imagePullSecrets: []
