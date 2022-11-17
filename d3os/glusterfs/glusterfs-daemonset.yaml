@@ -10,7 +10,7 @@ metadata:
     description: GlusterFS DaemonSet
     tags: glusterfs
 spec:
-  selector:
+  selector: # wangfei: add selector
     matchLabels:
       glusterfs-node: pod
   template:

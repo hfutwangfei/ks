@@ -1,4 +1,5 @@
 ---
+# wangfei: add Secret
 apiVersion: v1
 kind: Secret
 type: kubernetes.io/glusterfs
