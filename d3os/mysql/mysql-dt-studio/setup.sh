@@ -10,9 +10,9 @@ sleep 1
 
 echo "service mysql status"
 
-echo 'dt_commercialzation_test.sql importing....'
-mysql < /mysql/sql/dt_commercialzation_test.sql
-echo 'dt_commercialzation_test.sql imported....'
+echo 'data.sql importing....'
+mysql < /mysql/sql/data.sql
+echo 'data.sql imported....'
 
 sleep 1
 

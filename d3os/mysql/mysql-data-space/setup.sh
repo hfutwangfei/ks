@@ -10,9 +10,9 @@ sleep 1
 
 echo "service mysql status"
 
-echo 'datathread.sql importing....'
-mysql < /mysql/sql/datathread.sql
-echo 'datathread.sql imported....'
+echo 'data.sql importing....'
+mysql < /mysql/sql/data.sql
+echo 'data.sql imported....'
 
 sleep 1
 

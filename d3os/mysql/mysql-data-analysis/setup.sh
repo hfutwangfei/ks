@@ -10,9 +10,9 @@ sleep 1
 
 echo "service mysql status"
 
-echo 'dataease.sql importing....'
-mysql < /mysql/sql/dataease.sql
-echo 'dataease.sql imported....'
+echo 'data.sql importing....'
+mysql < /mysql/sql/data.sql
+echo 'data.sql imported....'
 
 sleep 1
 

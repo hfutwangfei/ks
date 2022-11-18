@@ -10,9 +10,9 @@ sleep 1
 
 echo "service mysql status"
 
-echo 'login-center.sql importing....'
-mysql < /mysql/sql/login-center.sql
-echo 'login-center.sql imported....'
+echo 'data.sql impoarting....'
+mysql < /mysql/sql/data.sql
+echo 'data.sql imported....'
 
 sleep 1
 
