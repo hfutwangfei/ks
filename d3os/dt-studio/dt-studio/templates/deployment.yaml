@@ -33,9 +33,52 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: MY_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: DATASOURCE_URL
+              value: {{ .Values.env.datasource_url }}
+            - name: DATASOURCE_USERNAME
+              value: {{ .Values.env.datasource_username }}
+            - name: DATASOURCE_PASSWORD
+              value: {{ .Values.env.datasource_password  | quote }}
+            - name: REDIS_HOST
+              value: {{ .Values.env.redis_host }}
+            - name: REDIS_PORT
+              value: {{ .Values.env.redis_port | quote }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.env.redis_password  | quote }}
+            - name: REDIS_DATABASE
+              value: {{ .Values.env.redis_database | quote }}
+            - name: MINIO_HOST
+              value: {{ .Values.env.minio_host }}
+            - name: MINIO_BUCKET
+              value: {{ .Values.env.minio_bucket }}
+            - name: MINIO_ACCESS_KEY
+              value: {{ .Values.env.minio_access_key }}
+            - name: MINIO_SECRET_KEY
+              value: {{ .Values.env.minio_secret_key }}
+            - name: DATAEASE_ADDR
+              value: {{ .Values.env.dataease_addr }}
+            - name: IOT_URL
+              value: {{ .Values.env.iot_url }}
+            - name: LOGIN_URL
+              value: {{ .Values.env.login_url }}
+            - name: USER_FLAG
+              value: {{ .Values.env.user_flag | quote }}
+            - name: USER_EXPIRETIME
+              value: {{ .Values.env.user_expiretime | quote }}
+            - name: USER_EXPIREINITTIME
+              value: {{ .Values.env.user_expireinittime | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port | default 8080 }}
+              protocol: TCP
+            - name: websocket
+              containerPort: {{ .Values.wsport | default 7999 }}
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

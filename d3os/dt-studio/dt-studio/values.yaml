@@ -40,6 +40,8 @@ service:
   type: ClusterIP
   port: 8080
 
+wsport: 7999
+
 ingress:
   enabled: false
   className: ""
@@ -80,3 +82,23 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+  datasource_url: 'mysql-dt-stdio-mysql-dt-studio.$(MY_NAMESPACE):3306/dt-commercialization'
+  datasource_username: 'd3os'
+  datasource_password: 'd3os@cosmoplat'
+  redis_host: 'redis-dt-stdio-master.$(MY_NAMESPACE).svc'
+  redis_port: '6379'
+  redis_password: 'Cosmo@2022'
+  redis_database: '0'
+  minio_host: 'http://minio.$(MY_NAMESPACE).svc:9000'
+  minio_bucket: 'model-file-bucket'
+  minio_access_key: 'YOURACCESSKEY'
+  minio_secret_key: 'YOURSECRETKEY'
+  dataease_addr: 'http://data-analysis.$(MY_NAMESPACE).svc:8081'
+  iot_url: 'http://iot-plat.$(MY_NAMESPACE).svc:8080'
+  login_url: 'http://login-center.$(MY_NAMESPACE).svc:8081'
+  user_flag: 'false'
+  user_expiretime: '600'
+  user_expireinittime: '3600'
+

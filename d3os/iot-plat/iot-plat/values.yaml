@@ -82,19 +82,19 @@ tolerations: []
 affinity: {}
 
 env:
-  postgresUrl: jdbc:postgresql://10.206.68.1:32662/iotplat
-  postgresUsername: wangfei-postgres
-  postgresPassword: Haier2022
+  postgresUrl: jdbc:postgresql://pgsql-cdc-iotp-cdcpgsqliotplat.$(MY_NAMESPACE).svc:5432/iotplat
+  postgresUsername: postgres
+  postgresPassword: Cosmo@2022
   #redis or caffeine
   cacheType: redis
   redisConnectionType: standalone
-  redisHost: 10.233.118.96
+  redisHost: redis-iotplat-master.$(MY_NAMESPACE)
   redisPort: 6379
   redisNodes:
-  redisPassword: Haier2022
+  redisPassword: Cosmo@2022
   #kafka or in-memory
   iotQueueType: kafka
-  iotKafkaServers: 10.206.68.1:9092
+  iotKafkaServers: my-cluster-kafka-bootstrap.$(MY_NAMESPACE).svc:9092
   useUuc: false
   uucAuthUrl:
 

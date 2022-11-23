@@ -34,6 +34,11 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: MY_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
             - name: mysql_user
               value: {{ .Values.env.mysql_user }}
             - name: mysql_password
@@ -53,11 +58,11 @@ spec:
             - name: redis_host
               value: {{ .Values.env.redis_host }}
             - name: redis_port
-              value: {{ .Values.env.redis_port }}
+              value: {{ .Values.env.redis_port | quote }}
             - name: redis_password
               value: {{ .Values.env.redis_password }}
             - name: redis_database
-              value: {{ .Values.env.redis_database }}
+              value: {{ .Values.env.redis_database | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port | default 80 }}

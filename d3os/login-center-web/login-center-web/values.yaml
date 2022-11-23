@@ -82,4 +82,4 @@ tolerations: []
 affinity: {}
 
 env:
-  BACKEND_SERVICE_URL: 
+  BACKEND_SERVICE_URL: 'http://login-center.$(MY_NAMESPACE).svc:8081/center/'

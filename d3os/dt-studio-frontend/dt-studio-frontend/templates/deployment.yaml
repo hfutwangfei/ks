@@ -39,6 +39,20 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+#            - name: host-time
+#              readOnly: true
+#              mountPath: /etc/localtime
+            - name: nginx
+              mountPath: /etc/nginx/conf.d/
+      volumes:
+        - name: nginx
+          configMap:
+            name: nginx
+            items:
+              - key: default.conf
+                path: default.conf
+
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
