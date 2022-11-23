@@ -92,6 +92,22 @@ CREATE TABLE `user_pipeline_relation`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 170 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户管道关系' ROW_FORMAT = DYNAMIC;
 
+-- todo！！！
+
+-- todo: 初始化演示数据，与 data-space 镜像配合
+
+-- todo！！！
+LOCK TABLES `user_pipeline_relation` WRITE;
+
+INSERT INTO `user_pipeline_relation` VALUES
+    (170,1,'admin','17b2f30a7-4acd-431a-92d8-d8e6e0d2f6a4',0,'',0,0,'2022-11-22 01:06:24'),
+    (171,1,'admin','228c97626-d86a-4b95-b293-a19fecec90c0',0,'',0,0,'2022-11-22 01:08:57'),
+    (172,1,'admin','33d042c31-9534-4777-b97d-2138c376e0aa',0,'',0,0,'2022-11-22 01:14:05'),
+    (173,1,'admin','482b987f0-f794-4045-bfbb-1a39117710a0',0,'',0,0,'2022-11-22 01:14:58'),
+    (175,1,'admin','500b7659f-103b-47b0-bd15-db1cb8c5b7ee',0,'',0,0,'2022-11-22 01:15:33');
+
+UNLOCK TABLES;
+
 -- ----------------------------
 -- Table structure for user_role
 -- ----------------------------
