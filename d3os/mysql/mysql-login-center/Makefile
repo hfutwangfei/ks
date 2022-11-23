@@ -2,10 +2,10 @@ IMAGE_ADDRESS ?= registry-edge.cosmoplat.com
 IMAGE_PROJECT ?= d3os
 
 IMAGE_NAME ?= mysql-login-center
-IMAGE_VERSION ?= v0.1.0
+IMAGE_VERSION ?= v0.1.1
 
 CHART_NAME ?= ${IMAGE_NAME}
-CHART_VERSION ?= 0.1.0
+CHART_VERSION ?= 0.1.1
 
 .prepare:
 	@rm -rf _output && mkdir _output && mkdir _output/sql
