@@ -7,9 +7,13 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - name: http
+      port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
-      name: http
+    - name: websocket
+      port: {{ .Values.wsport }}
+      targetPort: http
+      protocol: TCP
   selector:
     {{- include "dt-studio.selectorLabels" . | nindent 4 }}

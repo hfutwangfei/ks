@@ -82,15 +82,15 @@ tolerations: []
 affinity: {}
 
 env:
-  mysql_user: 
-  mysql_password: 
-  mysql_ip_port: 
-  mysql_database: 
-  minio_host: 
-  minio_bucket: 
-  dt_studio_host: 
-  share_address_url: 
-  redis_host: 
-  redis_port: 
-  redis_password: 
-  redis_database: 
+  mysql_user: 'd3os'
+  mysql_password: 'd3os@cosmoplat'
+  mysql_ip_port: 'mysql-dt-analy-mysql-data-analysis.$(MY_NAMESPACE).svc:3306'
+  mysql_database: 'dataease'
+  minio_host: 'http://minio.$(MY_NAMESPACE).svc:9000'
+  minio_bucket: 'dataease'
+  dt_studio_host: 'http://dt-studio.$(MY_NAMESPACE).svc:8080'
+  share_address_url: 'http://data-analysis.$(MY_NAMESPACE).svc:8081/link/'
+  redis_host: 'redis-dt-analy-master.$(MY_NAMESPACE).svc'
+  redis_port: '6379'
+  redis_password: 'Cosmo@2022'
+  redis_database: '0'

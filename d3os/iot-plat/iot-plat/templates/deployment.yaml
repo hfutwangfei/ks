@@ -40,6 +40,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           # wangfei:
           env:
+            - name: MY_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
             - name: SPRING_DATASOURCE_URL
               value: {{ .Values.env.postgresUrl | quote }}
             - name: SPRING_DATASOURCE_USERNAME

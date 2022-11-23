@@ -82,12 +82,12 @@ tolerations: []
 affinity: {}
 
 env: 
-  dataResourceUrl: 
-  dataResourceUsername: 
-  dataResourcePassword: 
-  redisUrl: 
-  redisPort: 
-  redisPassword: 
+  dataResourceUrl: mysql-login-ce-mysql-login-center.$(MY_NAMESPACE).svc:3306/login-center
+  dataResourceUsername: d3os
+  dataResourcePassword: d3os@cosmoplat
+  redisUrl: redis-login-master.$(MY_NAMESPACE).svc
+  redisPort: 6379
+  redisPassword: Cosmo@2022
   deadlineTime: 6
   open: true
   tenantId: 53837240-3025-11ed-a60b-5f28a72be0bf
